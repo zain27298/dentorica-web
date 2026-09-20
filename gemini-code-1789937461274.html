@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dentorica Lab - Digital Prescription Order</title>
+  <style>
+    :root {
+      --primary: #005696;
+      --primary-light: #e8f4fc;
+      --accent: #00a8cc;
+      --text: #1e293b;
+      --border: #cbd5e1;
+      --bg: #f8fafc;
+      --white: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      padding: 24px 12px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .form-container {
+      background: var(--white);
+      max-width: 780px;
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+      border: 1px solid var(--border);
+      overflow: hidden;
+    }
+
+    .header {
+      background: linear-gradient(135deg, var(--primary) 0%, #003761 100%);
+      color: var(--white);
+      padding: 24px;
+      text-align: center;
+    }
+
+    .header h1 {
+      font-size: 26px;
+      letter-spacing: 0.5px;
+      margin-bottom: 4px;
+    }
+
+    .header p {
+      font-size: 13px;
+      opacity: 0.9;
+    }
+
+    .header .contact-bar {
+      margin-top: 10px;
+      font-size: 12px;
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    form {
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .section-title {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      border-bottom: 2px solid var(--primary-light);
+      padding-bottom: 6px;
+      margin-bottom: 12px;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 16px;
+    }
+
+    @media (max-width: 600px) {
+      .grid-2, .grid-3 {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    label {
+      font-size: 13px;
+      font-weight: 600;
+      color: #475569;
+    }
+
+    input[type="text"],
+    input[type="date"],
+    input[type="tel"],
+    select,
+    textarea {
+      padding: 10px 12px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      font-size: 14px;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    input:focus, select:focus, textarea:focus {
+      border-color: var(--primary);
+    }
+
+    /* Tooth Chart Selector */
+    .tooth-chart {
+      background: var(--primary-light);
+      padding: 14px;
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .quadrant-row {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .tooth-btn-group {
+      display: flex;
+      gap: 4px;
+      flex-wrap: wrap;
+    }
+
+    .tooth-check {
+      display: none;
+    }
+
+    .tooth-label {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      font-size: 11px;
+      font-weight: 600;
+      cursor: pointer;
+      user-select: none;
+      transition: all 0.15s ease;
+    }
+
+    .tooth-check:checked + .tooth-label {
+      background: var(--primary);
+      color: var(--white);
+      border-color: var(--primary);
+    }
+
+    .chart-divider {
+      width: 2px;
+      height: 24px;
+      background: #94a3b8;
+    }
+
+    /* Checkbox & Radio Grid */
+    .options-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 10px;
+    }
+
+    .custom-check {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      cursor: pointer;
+    }
+
+    .custom-check input {
+      accent-color: var(--primary);
+      width: 16px;
+      height: 16px;
+    }
+
+    .btn-submit {
+      background: var(--primary);
+      color: var(--white);
+      padding: 14px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: 700;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      transition: background 0.2s;
+    }
+
+    .btn-submit:hover {
+      background: #004375;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form-container">
+    <div class="header">
+      <h1>Dentorica Digital Dental Lab</h1>
+      <p>Precision CAD/CAM Restorations & Prosthetics</p>
+      <div class="contact-bar">
+        <span>📍 Satluj Block, Allama Iqbal Town, Lahore</span>
+        <span>📞 0311-4289005 / 0308-4377295</span>
+        <span>✉️ casses@dentorica.com</span>
+      </div>
+    </div>
+
+    <form id="labSlipForm" onsubmit="handleSendOrder(event)">
+      <!-- Clinic & Case Meta -->
+      <div>
+        <div class="section-title">Case Credentials</div>
+        <div class="grid-2">
+          <div class="form-group">
+            <label>Dr. Name *</label>
+            <input type="text" id="drName" required placeholder="e.g. Dr. Salman Tariq">
+          </div>
+          <div class="form-group">
+            <label>Clinic Name *</label>
+            <input type="text" id="clinicName" required placeholder="e.g. Smile Care Dental">
+          </div>
+        </div>
+        <div class="grid-3" style="margin-top: 12px;">
+          <div class="form-group">
+            <label>Patient Name / ID *</label>
+            <input type="text" id="patientId" required placeholder="e.g. Case #04 / Mrs. Ayesha">
+          </div>
+          <div class="form-group">
+            <label>Target Delivery Date *</label>
+            <input type="date" id="dueDate" required>
+          </div>
+          <div class="form-group">
+            <label>Contact / WhatsApp</label>
+            <input type="tel" id="contactNum" placeholder="03XXXXXXXXX">
+          </div>
+        </div>
+      </div>
+
+      <!-- Tooth Selection Chart (FDI) -->
+      <div>
+        <div class="section-title">Select Unit / Tooth Number(s)</div>
+        <div class="tooth-chart">
+          <!-- Upper Arch -->
+          <div class="quadrant-row">
+            <div class="tooth-btn-group">
+              <label><input type="checkbox" class="tooth-check" name="teeth" value="18"><span class="tooth-label">18</span></label>
+              <label><input type="checkbox" class="tooth-check" name="teeth" value="17"><span class="tooth-label">17</span></label>
+              <label><input type="checkbox" class="tooth-check" name="teeth" value="16"><span class="tooth-label">16</span></label>
+              <label><input type="checkbox" class="tooth-check" name="teeth" value="15"><span class="tooth-label">15</span></label>
+              <label><input type="checkbox" class="tooth-check" name="teeth" value="14"><span class="tooth-label">14</span></label>
+              <label><input type="checkbox" class="tooth-check" name="teeth" value="13"><span class="tooth-label">13</span></label>
+              <label><input type="checkbox" class="tooth-check" name="teeth" value="12"><span class="tooth-label">12</span></label>
+              <label><input type="checkbox" class="tooth-check" name="teeth" value="11"><span class="tooth-label">11</span></label>
+            </div>
+            <div class="chart-divider"></div>
+            <div class="tooth-btn-group">
+              <label><input type="checkbox" class="tooth-check" name="teeth" value="21"><span class="tooth-label">21</span></label>
+              <label><input type="checkbox" class="tooth-check" name="teeth" value="22"><span class="tooth-label">22</span></label>
+              <label><input type="checkbox" class="tooth-check" name="teeth" value="23"><span class="tooth-label">23</span></label>
+              <label><input type="checkbox" class="tooth-check" name="teeth" value="24"><span class="tooth-label">24</span></label>
+              <label><input type="checkbox" class="tooth-check" name="teeth" value="25"><span class="tooth-label">25</span></label>
+              <label><input type="checkbox" class="tooth-check" name="teeth" value="26"><span class="tooth-label">26</span></label>
+              <label><input type="checkbox" class="tooth-check" name="teeth" value="27"><span class="tooth-label">27</span></label>
+              <label><input type="checkbox" class="tooth-check" name="teeth" value="28"><span class="tooth-label">28</span></label>
+            </div>
+          </div>
+          <!-- Lower Arch -->
+          <div class="quadrant-row">
+            <div class="tooth-btn-group">
+              <label><input type="checkbox" class="tooth-check" name="teeth" value="48"><span class="tooth-label">48</span></label>
+              <label><input type="checkbox" class="tooth-check" name="teeth" value="47"><span class="tooth-label">47</span></label>
+              <label><input type="checkbox" class="tooth-check" name="teeth" value="46"><span class="tooth-label">46</span></label>
+              <label><input type="checkbox" class="tooth-check" name="teeth" value="45"><span class="tooth-label">45</span></label>
+              <label><input type="checkbox" class="tooth-check" name="teeth" value="44"><span class="tooth-label">44</span></label>
+              <label><input type="checkbox" class="tooth-check" name="teeth" value="43"><span class="tooth-label">43</span></label>
+              <label><input type="checkbox" class="tooth-check" name="teeth" value="42"><span class="tooth-label">42</span></label>
+              <label><input type="checkbox" class="tooth-check" name="teeth" value="41"><span class="tooth-label">41</span></label>
+            </div>
+            <div class="chart-divider"></div>
+            <div class="tooth-btn-group">
+              <label><input type="checkbox" class="tooth-check" name="teeth" value="31"><span class="tooth-label">31</span></label>
+              <label><input type="checkbox" class="tooth-check" name="teeth" value="32"><span class="tooth-label">32</span></label>
+              <label><input type="checkbox" class="tooth-check" name="teeth" value="33"><span class="tooth-label">33</span></label>
+              <label><input type="checkbox" class="tooth-check" name="teeth" value="34"><span class="tooth-label">34</span></label>
+              <label><input type="checkbox" class="tooth-check" name="teeth" value="35"><span class="tooth-label">35</span></label>
+              <label><input type="checkbox" class="tooth-check" name="teeth" value="36"><span class="tooth-label">36</span></label>
+              <label><input type="checkbox" class="tooth-check" name="teeth" value="37"><span class="tooth-label">37</span></label>
+              <label><input type="checkbox" class="tooth-check" name="teeth" value="38"><span class="tooth-label">38</span></label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Restoration Type & Shades -->
+      <div>
+        <div class="section-title">Restoration & Shade Details</div>
+        <div class="grid-2">
+          <div class="form-group">
+            <label>Restoration System *</label>
+            <select id="restorationType" required>
+              <option value="">-- Choose Category --</option>
+              <option value="Monolithic Zirconia">Monolithic Zirconia</option>
+              <option value="Multilayer Aesthetic Zirconia">Multilayer Aesthetic Zirconia</option>
+              <option value="Standard PFM">Standard PFM</option>
+              <option value="E.max / Ceramic">E.max / Ceramic Press</option>
+              <option value="Flexible Denture">Flexible Partial Denture</option>
+              <option value="Cast Partial Denture (CPD)">Cast Partial Denture (CPD)</option>
+              <option value="Clear Aligner">Clear Aligner Step</option>
+              <option value="Clear Retainer">Clear Retainer (Essix)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Body Shade (VITA) *</label>
+            <input type="text" id="shade" required placeholder="e.g. A1, A2, B2, 3D 2M2">
+          </div>
+        </div>
+        <div class="grid-2" style="margin-top: 12px;">
+          <div class="form-group">
+            <label>Stump / Prep Shade</label>
+            <input type="text" id="stumpShade" placeholder="e.g. ND2 / Normal / Darkened">
+          </div>
+          <div class="form-group">
+            <label>Margin Type</label>
+            <select id="marginType">
+              <option value="Porcelain Butt (360°)">Porcelain Butt Margin (360°)</option>
+              <option value="Lingual Collar">Lingual Metal Collar</option>
+              <option value="Feather Edge / Chamfer">Feather Edge / Chamfer</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- Occlusal Clearance & Contacts -->
+      <div>
+        <div class="section-title">Occlusal Preference & Enclosures</div>
+        <div class="options-grid">
+          <label class="custom-check"><input type="radio" name="occlusion" value="Tight Centric" checked> In Tight Occlusion</label>
+          <label class="custom-check"><input type="radio" name="occlusion" value="Passive/Light"> Passive / Light Bite</label>
+          <label class="custom-check"><input type="radio" name="occlusion" value="0.5mm Out"> 0.5 mm Out of Occlusion</label>
+        </div>
+        <div class="options-grid" style="margin-top: 10px;">
+          <label class="custom-check"><input type="checkbox" name="enclosure" value="Silicone Impression"> Physical Impression</label>
+          <label class="custom-check"><input type="checkbox" name="enclosure" value="Opposing Arch"> Opposing Arch</label>
+          <label class="custom-check"><input type="checkbox" name="enclosure" value="Bite Registration"> Bite Wax / Reg</label>
+          <label class="custom-check"><input type="checkbox" name="enclosure" value="Digital STL Sent"> Digital STL Emailed</label>
+        </div>
+      </div>
+
+      <!-- Notes -->
+      <div class="form-group">
+        <label>Clinical Notes / Custom Requests</label>
+        <textarea id="notes" rows="3" placeholder="e.g., Patient has high smile line, reduce contact tightness slightly..."></textarea>
+      </div>
+
+      <button type="submit" class="btn-submit">
+        Send Order to Dentorica Lab (WhatsApp)
+      </button>
+    </form>
+  </div>
+
+  <script>
+    function handleSendOrder(event) {
+      event.preventDefault();
+
+      const drName = document.getElementById('drName').value;
+      const clinicName = document.getElementById('clinicName').value;
+      const patientId = document.getElementById('patientId').value;
+      const dueDate = document.getElementById('dueDate').value;
+      const contactNum = document.getElementById('contactNum').value;
+      const restorationType = document.getElementById('restorationType').value;
+      const shade = document.getElementById('shade').value;
+      const stumpShade = document.getElementById('stumpShade').value || 'Standard';
+      const marginType = document.getElementById('marginType').value;
+      const occlusion = document.querySelector('input[name="occlusion"]:checked')?.value;
+      const notes = document.getElementById('notes').value || 'None';
+
+      // Selected teeth
+      const selectedTeeth = Array.from(document.querySelectorAll('input[name="teeth"]:checked'))
+        .map(el => el.value)
+        .join(', ') || 'Not specified';
+
+      // Enclosures
+      const enclosures = Array.from(document.querySelectorAll('input[name="enclosure"]:checked'))
+        .map(el => el.value)
+        .join(', ') || 'None';
+
+      const message = 
+`*NEW LAB ORDER - DENTORICA DIGITAL DENTAL LAB*
+---------------------------------------
+*Doctor:* ${drName}
+*Clinic:* ${clinicName}
+*Patient ID:* ${patientId}
+*Contact:* ${contactNum}
+*Due Date:* ${dueDate}
+---------------------------------------
+*Tooth #:* ${selectedTeeth}
+*Restoration:* ${restorationType}
+*Shade (VITA):* ${shade}
+*Stump Shade:* ${stumpShade}
+*Margin:* ${marginType}
+*Occlusion:* ${occlusion}
+*Enclosures:* ${enclosures}
+---------------------------------------
+*Clinical Notes:* ${notes}
+---------------------------------------
+Generated via Dentorica Digital Slip`;
+
+      const encodedMessage = encodeURIComponent(message);
+      // Lab official WhatsApp number (923114289005)
+      window.open(`https://wa.me/923114289005?text=${encodedMessage}`, '_blank');
+    }
+  </script>
+</body>
+</html>
