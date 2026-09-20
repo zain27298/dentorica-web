@@ -3,12 +3,48 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-  <title>Dentorica Digital Dental Lab | B2B Restorations & STL Design Lahore</title>
-  <meta name="description" content="Premier B2B dental lab in Lahore. High-precision CAD/CAM Zirconia, Exocad/3Shape STL designs, precision PFM, flexible & cast partial dentures (CPD), and clear aligners.">
+  <title>Dentorica | Digital Dental Laboratory Lahore | CAD/CAM Zirconia & PFM</title>
+  <meta name="description" content="Premier B2B digital dental laboratory in Lahore. Specializing in sub-micron CAD/CAM Multi-Layer Zirconia, Exocad/3Shape STL designs, precision PFM, flexible dentures, and CPD.">
   <link rel="canonical" href="https://dentorica.com/">
 
-  <!-- Vector Favicon from Brand Identity -->
+  <!-- Vector Favicon -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 500 500'><path d='M250,135 C285,145 320,132 345,152 C365,168 360,195 348,225 C340,248 318,340 286,375 C278,384 266,380 262,365 C256,345 250,332 250,332 C250,332 244,345 238,365 C234,380 222,384 214,375 C182,340 160,248 152,225 C140,195 135,168 155,152 C180,132 215,145 250,135 Z' fill='none' stroke='%231a2e40' stroke-width='24'/><path d='M166,168 C178,154 195,147 215,147 C185,165 174,188 170,215 C163,195 162,180 166,168 Z' fill='%23008ecc'/><path d='M250,305 C238,285 208,255 208,225 C208,198 230,188 250,210 C270,188 292,198 292,225 C292,255 262,285 250,305 Z' fill='none' stroke='%231a2e40' stroke-width='20'/></svg>">
+
+  <!-- Local SEO Medical Business Schema Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MedicalBusiness",
+    "name": "Dentorica Digital Dental Lab",
+    "url": "https://dentorica.com/",
+    "telephone": "+923084377295",
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Satluj Block, Allama Iqbal Town",
+      "addressLocality": "Lahore",
+      "addressRegion": "Punjab",
+      "postalCode": "54000",
+      "addressCountry": "PK"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 31.5038,
+      "longitude": 74.2882
+    },
+    "areaServed": [
+      "Lahore", "Gulberg", "DHA Lahore", "Johar Town", "Allama Iqbal Town", "Model Town", "Garden Town"
+    ],
+    "knowsAbout": [
+      "CAD/CAM Zirconia",
+      "Exocad 3Shape STL Design",
+      "Precision Layered PFM",
+      "Cast Partial Dentures CPD",
+      "Flexible Partial Dentures",
+      "Clear Aligners"
+    ]
+  }
+  </script>
 
   <style>
     :root {
@@ -38,10 +74,12 @@
       padding: 0;
     }
 
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    html, body {
+      overflow-x: hidden;
+      width: 100%;
       background-color: var(--bg-page);
       color: var(--text-body);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       line-height: 1.6;
       -webkit-font-smoothing: antialiased;
     }
@@ -71,7 +109,7 @@
       color: #38bdf8;
     }
 
-    /* Header & Navigation Bar */
+    /* Navigation Header */
     header {
       position: sticky;
       top: 0;
@@ -100,8 +138,8 @@
     }
 
     .logo-svg-container {
-      width: 40px;
-      height: 40px;
+      width: 38px;
+      height: 38px;
       flex-shrink: 0;
     }
 
@@ -146,7 +184,7 @@
       color: var(--primary);
     }
 
-    /* Persistent Header CTA Button */
+    /* Persistent Top-Right CTA Button */
     .btn-nav-cta {
       background: var(--primary);
       color: #fff !important;
@@ -191,7 +229,7 @@
     }
 
     .hero h1 {
-      font-size: 44px;
+      font-size: 42px;
       letter-spacing: -1px;
       margin-bottom: 18px;
       color: var(--brand-navy);
@@ -215,7 +253,7 @@
     .btn-main {
       background: var(--primary);
       color: #fff;
-      padding: 14px 30px;
+      padding: 14px 28px;
       border-radius: var(--radius-sm);
       font-weight: 700;
       font-size: 15px;
@@ -235,7 +273,7 @@
       background: #fff;
       color: var(--text-dark);
       border: 1px solid var(--border);
-      padding: 14px 28px;
+      padding: 14px 26px;
       border-radius: var(--radius-sm);
       font-weight: 600;
       font-size: 15px;
@@ -279,6 +317,7 @@
       font-weight: 500;
     }
 
+    /* Section Structure */
     .section-wrap {
       max-width: 1240px;
       margin: 0 auto;
@@ -287,7 +326,7 @@
 
     .section-header {
       text-align: center;
-      max-width: 720px;
+      max-width: 760px;
       margin: 0 auto 40px;
     }
 
@@ -303,6 +342,7 @@
       color: var(--text-muted);
     }
 
+    /* 6 Services Grid */
     .services-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -412,6 +452,7 @@
       color: #fff;
     }
 
+    /* Materials Matrix Table */
     .table-container {
       overflow-x: auto;
       margin: 20px 0;
@@ -445,6 +486,7 @@
       border-bottom: none;
     }
 
+    /* Workflow Strip */
     .workflow-strip {
       background: #ffffff;
       border-top: 1px solid var(--border);
@@ -489,6 +531,7 @@
       color: var(--text-muted);
     }
 
+    /* Digital Lab Slip Form Portal */
     .order-section-bg {
       background: linear-gradient(180deg, #f8fafc 0%, #eef5fa 100%);
       padding: 60px 24px;
@@ -694,6 +737,7 @@
       background: var(--primary-dark);
     }
 
+    /* Lab Coverage Bar */
     .lab-info-bar {
       background: #fff;
       border-top: 1px solid var(--border);
@@ -755,19 +799,18 @@
       z-index: 999;
     }
 
-    /* Mobile Specific Refinements */
+    /* Mobile Responsive Rules */
     @media (max-width: 900px) {
-      .grid-2 {
-        grid-template-columns: 1fr;
-      }
-      .hero h1 {
-        font-size: 28px;
-      }
-      nav ul {
-        display: none; /* Hide the text links on phone */
+      html, body {
+        overflow-x: hidden;
+        max-width: 100vw;
       }
       .nav-inner {
-        padding: 8px 16px;
+        padding: 8px 14px;
+        width: 100%;
+      }
+      nav ul {
+        display: none; /* Collapses desktop text links on phone */
       }
       .brand-title {
         font-size: 17px;
@@ -776,17 +819,49 @@
         font-size: 9px;
       }
       .btn-nav-cta {
-        padding: 7px 12px;
-        font-size: 12px; /* Nicely sized for mobile top bar */
+        padding: 6px 12px;
+        font-size: 12px; /* Stays visible in top right */
+      }
+      .hero {
+        padding: 36px 14px 28px;
+      }
+      .hero h1 {
+        font-size: 26px;
+        word-break: break-word;
+      }
+      .hero p {
+        font-size: 14px;
       }
       .hero-cta-group {
         flex-direction: column;
+        gap: 10px;
       }
       .btn-main, .btn-alt {
         width: 100%;
       }
+      .specs-strip {
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+      }
+      .spec-card {
+        padding: 12px;
+      }
+      .spec-card .stat {
+        font-size: 20px;
+      }
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+      .grid-2 {
+        grid-template-columns: 1fr;
+      }
       .portal-box {
         padding: 20px 14px;
+      }
+      .table-container {
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
       }
     }
   </style>
@@ -825,7 +900,7 @@
         </ul>
       </nav>
 
-      <!-- Persistent Dispatch Button: Visible on both Desktop & Mobile -->
+      <!-- Persistent Dispatch CTA (Visible on both Desktop & Mobile) -->
       <a href="#portal" class="btn-nav-cta">Dispatch Case</a>
     </div>
   </header>
@@ -869,7 +944,7 @@
   <!-- Visual Services Showcase: 6 Distinct Images -->
   <section id="services" class="section-wrap">
     <div class="section-header">
-      <h2>Engineered B2B Dental Solutions</h2>
+      <h2>B2B Digital Dental Laboratory Services in Lahore</h2>
       <p>Subtractive 5-axis CAD/CAM milling, digital STL modeling, and precision manual ceramic layering tailored for clinical dentists.</p>
     </div>
 
@@ -1255,7 +1330,7 @@
       </div>
       <div class="info-card">
         <h4>📞 Phone & Case Support</h4>
-        <p>Lab Line: 0311-4289005<br>Dispatch: 0308-4377295<br>Email: casses@dentorica.com</p>
+        <p>Lab Line: 0311-4289005<br>Dispatch: 0308-4377295<br>Email: cases@dentorica.com</p>
       </div>
       <div class="info-card">
         <h4>🛵 Lahore Courier Coverage</h4>
