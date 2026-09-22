@@ -53,7 +53,6 @@
       --primary: #004d84;
       --primary-dark: #002e50;
       --primary-light: #e8f4fc;
-      --accent: #00a8cc;
       --text-dark: #0f172a;
       --text-body: #334155;
       --text-muted: #64748b;
@@ -68,12 +67,7 @@
       --shadow-lg: 0 20px 40px -10px rgba(0, 77, 132, 0.14);
     }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
+    * { box-sizing: border-box; margin: 0; padding: 0; }
     html, body {
       overflow-x: hidden;
       width: 100%;
@@ -84,17 +78,8 @@
       -webkit-font-smoothing: antialiased;
     }
 
-    h1, h2, h3, h4, h5, h6 {
-      color: var(--text-dark);
-      font-weight: 700;
-      line-height: 1.2;
-    }
-
-    a {
-      color: var(--primary);
-      text-decoration: none;
-      transition: all 0.2s ease;
-    }
+    h1, h2, h3, h4 { color: var(--text-dark); font-weight: 700; line-height: 1.2; }
+    a { color: var(--primary); text-decoration: none; transition: all 0.2s ease; }
 
     .top-strip {
       background: var(--brand-navy);
@@ -104,12 +89,8 @@
       text-align: center;
       font-weight: 500;
     }
+    .top-strip strong { color: #38bdf8; }
 
-    .top-strip strong {
-      color: #38bdf8;
-    }
-
-    /* Navigation Header */
     header {
       position: sticky;
       top: 0;
@@ -118,9 +99,8 @@
       border-bottom: 1px solid var(--border);
       z-index: 1000;
     }
-
     .nav-inner {
-      max-width: 1240px;
+      max-width: 1280px;
       margin: 0 auto;
       padding: 10px 24px;
       display: flex;
@@ -128,7 +108,6 @@
       align-items: center;
       gap: 12px;
     }
-
     .brand-logo-wrap {
       display: flex;
       align-items: center;
@@ -136,13 +115,7 @@
       text-decoration: none;
       flex-shrink: 0;
     }
-
-    .logo-svg-container {
-      width: 38px;
-      height: 38px;
-      flex-shrink: 0;
-    }
-
+    .logo-svg-container { width: 38px; height: 38px; flex-shrink: 0; }
     .brand-title {
       font-size: 20px;
       font-weight: 800;
@@ -152,7 +125,6 @@
       flex-direction: column;
       line-height: 1;
     }
-
     .brand-title span {
       font-size: 10px;
       font-weight: 700;
@@ -162,29 +134,20 @@
       margin-top: 3px;
     }
 
-    nav {
-      display: flex;
-      align-items: center;
-    }
-
+    nav { display: flex; align-items: center; }
     nav ul {
       display: flex;
       list-style: none;
       gap: 20px;
       align-items: center;
     }
-
     nav a {
       color: var(--text-muted);
       font-size: 14px;
       font-weight: 600;
     }
+    nav a:hover { color: var(--primary); }
 
-    nav a:hover {
-      color: var(--primary);
-    }
-
-    /* Persistent Top-Right CTA Button */
     .btn-nav-cta {
       background: var(--primary);
       color: #fff !important;
@@ -196,12 +159,8 @@
       flex-shrink: 0;
       box-shadow: 0 2px 8px rgba(0, 77, 132, 0.2);
     }
+    .btn-nav-cta:hover { background: var(--primary-dark); }
 
-    .btn-nav-cta:hover {
-      background: var(--primary-dark);
-    }
-
-    /* Hero Section */
     .hero {
       background: radial-gradient(circle at 85% 15%, rgba(0, 142, 204, 0.12), transparent 45%),
                   radial-gradient(circle at 15% 85%, rgba(0, 77, 132, 0.08), transparent 45%);
@@ -209,12 +168,7 @@
       text-align: center;
       border-bottom: 1px solid var(--border);
     }
-
-    .hero-content {
-      max-width: 900px;
-      margin: 0 auto;
-    }
-
+    .hero-content { max-width: 900px; margin: 0 auto; }
     .badge-sub {
       display: inline-block;
       background: var(--primary-light);
@@ -227,7 +181,6 @@
       border-radius: 50px;
       margin-bottom: 16px;
     }
-
     .hero h1 {
       font-size: 42px;
       letter-spacing: -1px;
@@ -235,21 +188,18 @@
       color: var(--brand-navy);
       line-height: 1.15;
     }
-
     .hero p {
       font-size: 17px;
       color: var(--text-muted);
       max-width: 760px;
       margin: 0 auto 30px;
     }
-
     .hero-cta-group {
       display: flex;
       justify-content: center;
       gap: 14px;
       flex-wrap: wrap;
     }
-
     .btn-main {
       background: var(--primary);
       color: #fff;
@@ -260,15 +210,9 @@
       box-shadow: 0 4px 14px rgba(0, 77, 132, 0.25);
       display: inline-flex;
       align-items: center;
-      justify-content: center;
       gap: 8px;
     }
-
-    .btn-main:hover {
-      background: var(--primary-dark);
-      transform: translateY(-2px);
-    }
-
+    .btn-main:hover { background: var(--primary-dark); transform: translateY(-2px); }
     .btn-alt {
       background: #fff;
       color: var(--text-dark);
@@ -279,13 +223,9 @@
       font-size: 15px;
       display: inline-flex;
       align-items: center;
-      justify-content: center;
       gap: 8px;
     }
-
-    .btn-alt:hover {
-      background: var(--primary-light);
-    }
+    .btn-alt:hover { background: var(--primary-light); }
 
     .specs-strip {
       display: grid;
@@ -294,7 +234,6 @@
       max-width: 1100px;
       margin: 40px auto 0;
     }
-
     .spec-card {
       background: #fff;
       border: 1px solid var(--border);
@@ -303,52 +242,19 @@
       box-shadow: var(--shadow-sm);
       text-align: left;
     }
+    .spec-card .stat { font-size: 24px; font-weight: 800; color: var(--primary); margin-bottom: 2px; }
+    .spec-card .desc { font-size: 13px; color: var(--text-muted); font-weight: 500; }
 
-    .spec-card .stat {
-      font-size: 24px;
-      font-weight: 800;
-      color: var(--primary);
-      margin-bottom: 2px;
-    }
+    .section-wrap { max-width: 1280px; margin: 0 auto; padding: 60px 24px; }
+    .section-header { text-align: center; max-width: 760px; margin: 0 auto 35px; }
+    .section-header h2 { font-size: 32px; color: var(--brand-navy); margin-bottom: 10px; }
+    .section-header p { font-size: 15px; color: var(--text-muted); }
 
-    .spec-card .desc {
-      font-size: 13px;
-      color: var(--text-muted);
-      font-weight: 500;
-    }
-
-    /* Section Structure */
-    .section-wrap {
-      max-width: 1240px;
-      margin: 0 auto;
-      padding: 60px 24px;
-    }
-
-    .section-header {
-      text-align: center;
-      max-width: 760px;
-      margin: 0 auto 40px;
-    }
-
-    .section-header h2 {
-      font-size: 32px;
-      color: var(--brand-navy);
-      letter-spacing: -0.5px;
-      margin-bottom: 10px;
-    }
-
-    .section-header p {
-      font-size: 15px;
-      color: var(--text-muted);
-    }
-
-    /* 6 Services Grid */
     .services-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
       gap: 22px;
     }
-
     .service-box {
       background: var(--bg-card);
       border: 1px solid var(--border);
@@ -359,27 +265,9 @@
       flex-direction: column;
       transition: transform 0.2s, border-color 0.2s;
     }
-
-    .service-box:hover {
-      transform: translateY(-4px);
-      border-color: var(--brand-blue);
-      box-shadow: var(--shadow-md);
-    }
-
-    .service-img-wrap {
-      width: 100%;
-      height: 190px;
-      background: #f1f5f9;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .service-img-wrap img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
+    .service-box:hover { transform: translateY(-4px); border-color: var(--brand-blue); box-shadow: var(--shadow-md); }
+    .service-img-wrap { width: 100%; height: 190px; background: #f1f5f9; position: relative; overflow: hidden; }
+    .service-img-wrap img { width: 100%; height: 100%; object-fit: cover; }
     .service-badge-tag {
       position: absolute;
       top: 12px;
@@ -392,33 +280,10 @@
       padding: 4px 10px;
       border-radius: 50px;
     }
-
-    .service-body {
-      padding: 20px;
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .service-body h3 {
-      font-size: 19px;
-      color: var(--brand-navy);
-      margin-bottom: 8px;
-    }
-
-    .service-body p {
-      font-size: 14px;
-      color: var(--text-body);
-      line-height: 1.5;
-      margin-bottom: 14px;
-      flex: 1;
-    }
-
-    .service-features {
-      list-style: none;
-      margin-bottom: 16px;
-    }
-
+    .service-body { padding: 20px; flex: 1; display: flex; flex-direction: column; }
+    .service-body h3 { font-size: 19px; color: var(--brand-navy); margin-bottom: 8px; }
+    .service-body p { font-size: 14px; color: var(--text-body); line-height: 1.5; margin-bottom: 14px; flex: 1; }
+    .service-features { list-style: none; margin-bottom: 16px; }
     .service-features li {
       font-size: 13px;
       color: var(--text-muted);
@@ -427,13 +292,7 @@
       align-items: center;
       gap: 6px;
     }
-
-    .service-features li::before {
-      content: "✓";
-      color: var(--brand-blue);
-      font-weight: 800;
-    }
-
+    .service-features li::before { content: "✓"; color: var(--brand-blue); font-weight: 800; }
     .service-order-link {
       display: inline-flex;
       align-items: center;
@@ -446,13 +305,8 @@
       font-weight: 700;
       text-align: center;
     }
+    .service-order-link:hover { background: var(--primary); color: #fff; }
 
-    .service-order-link:hover {
-      background: var(--primary);
-      color: #fff;
-    }
-
-    /* Materials Matrix Table */
     .table-container {
       overflow-x: auto;
       margin: 20px 0;
@@ -460,14 +314,7 @@
       border-radius: var(--radius-md);
       background: #fff;
     }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      text-align: left;
-      font-size: 14px;
-    }
-
+    table { width: 100%; border-collapse: collapse; text-align: left; font-size: 14px; }
     th {
       background: #f1f5f9;
       padding: 12px 16px;
@@ -475,37 +322,165 @@
       color: var(--text-dark);
       border-bottom: 1px solid var(--border);
     }
+    td { padding: 12px 16px; border-bottom: 1px solid var(--border); color: var(--text-body); }
+    tr:last-child td { border-bottom: none; }
 
-    td {
-      padding: 12px 16px;
-      border-bottom: 1px solid var(--border);
-      color: var(--text-body);
+    /* Interactive Portfolio Gallery */
+    .portfolio-tabs {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 30px;
+    }
+    .tab-btn {
+      background: #ffffff;
+      color: var(--text-dark);
+      border: 1px solid var(--border);
+      padding: 8px 16px;
+      border-radius: 50px;
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .tab-btn:hover, .tab-btn.active {
+      background: var(--brand-navy);
+      color: #ffffff;
+      border-color: var(--brand-navy);
+    }
+    .gallery-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+      gap: 22px;
+    }
+    .case-card {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.2s, box-shadow 0.2s;
+      cursor: pointer;
+    }
+    .case-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+    .media-box {
+      width: 100%;
+      height: 230px;
+      background: #0f172a;
+      position: relative;
+      overflow: hidden;
+    }
+    .media-box img, .media-box video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .badge {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: rgba(26, 46, 64, 0.9);
+      color: #38bdf8;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 3px 9px;
+      border-radius: 50px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .case-details { padding: 18px; flex: 1; display: flex; flex-direction: column; }
+    .case-details h3 { font-size: 16px; color: var(--brand-navy); margin-bottom: 6px; }
+    .case-details p { font-size: 13px; color: var(--text-muted); line-height: 1.5; margin-bottom: 12px; flex: 1; }
+    .specs-list {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      border-top: 1px solid #f1f5f9;
+      padding-top: 10px;
+      font-size: 11.5px;
+      font-weight: 600;
+      color: var(--brand-blue);
     }
 
-    tr:last-child td {
-      border-bottom: none;
+    /* Modal Lightbox Preview */
+    .lightbox-modal {
+      display: none;
+      position: fixed;
+      z-index: 9999;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(11, 19, 30, 0.94);
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .lightbox-content {
+      position: relative;
+      max-width: 900px;
+      width: 100%;
+      background: #ffffff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 25px 50px -12px rgba(0,0,0,0.8);
+      display: flex;
+      flex-direction: column;
+    }
+    .lightbox-preview-wrap {
+      width: 100%;
+      max-height: 65vh;
+      background: #0f172a;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    .lightbox-preview-wrap img, .lightbox-preview-wrap video {
+      max-width: 100%;
+      max-height: 65vh;
+      object-fit: contain;
+    }
+    .lightbox-info { padding: 20px 24px; }
+    .lightbox-info h3 { font-size: 20px; color: var(--brand-navy); margin-bottom: 6px; }
+    .lightbox-info p { font-size: 14px; color: var(--text-muted); }
+    .close-lightbox {
+      position: absolute;
+      top: 12px;
+      right: 14px;
+      background: rgba(0,0,0,0.6);
+      color: #fff;
+      border: none;
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      font-size: 18px;
+      font-weight: 800;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 10;
     }
 
-    /* Workflow Strip */
     .workflow-strip {
       background: #ffffff;
       border-top: 1px solid var(--border);
       border-bottom: 1px solid var(--border);
       padding: 50px 24px;
     }
-
     .steps-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 20px;
-      max-width: 1240px;
+      max-width: 1280px;
       margin: 0 auto;
     }
-
-    .step-box {
-      text-align: left;
-    }
-
+    .step-box { text-align: left; }
     .step-num {
       width: 34px;
       height: 34px;
@@ -519,24 +494,13 @@
       font-size: 15px;
       margin-bottom: 12px;
     }
+    .step-box h4 { font-size: 17px; margin-bottom: 6px; color: var(--brand-navy); }
+    .step-box p { font-size: 13px; color: var(--text-muted); }
 
-    .step-box h4 {
-      font-size: 17px;
-      margin-bottom: 6px;
-      color: var(--brand-navy);
-    }
-
-    .step-box p {
-      font-size: 13px;
-      color: var(--text-muted);
-    }
-
-    /* Digital Lab Slip Form Portal */
     .order-section-bg {
       background: linear-gradient(180deg, #f8fafc 0%, #eef5fa 100%);
       padding: 60px 24px;
     }
-
     .portal-box {
       background: #fff;
       border: 1px solid var(--border);
@@ -546,25 +510,14 @@
       max-width: 940px;
       margin: 0 auto;
     }
-
     .portal-title-bar {
       border-bottom: 2px solid var(--primary-light);
       padding-bottom: 16px;
       margin-bottom: 24px;
       text-align: center;
     }
-
-    .portal-title-bar h2 {
-      font-size: 28px;
-      color: var(--brand-navy);
-      margin-bottom: 6px;
-    }
-
-    .portal-title-bar p {
-      font-size: 14px;
-      color: var(--text-muted);
-    }
-
+    .portal-title-bar h2 { font-size: 28px; color: var(--brand-navy); margin-bottom: 6px; }
+    .portal-title-bar p { font-size: 14px; color: var(--text-muted); }
     .portal-section-tag {
       font-size: 13px;
       font-weight: 800;
@@ -578,29 +531,10 @@
       justify-content: space-between;
       align-items: center;
     }
-
-    .grid-2 {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 14px;
-    }
-
-    .form-group {
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-      margin-bottom: 12px;
-    }
-
-    .form-group label {
-      font-size: 13px;
-      font-weight: 700;
-      color: var(--text-dark);
-    }
-
-    .form-group input,
-    .form-group select,
-    .form-group textarea {
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .form-group { display: flex; flex-direction: column; gap: 6px; margin-bottom: 12px; }
+    .form-group label { font-size: 13px; font-weight: 700; color: var(--text-dark); }
+    .form-group input, .form-group select, .form-group textarea {
       padding: 11px 12px;
       border: 1.5px solid var(--border);
       border-radius: var(--radius-sm);
@@ -608,10 +542,7 @@
       background: #ffffff;
       outline: none;
     }
-
-    .form-group input:focus,
-    .form-group select:focus,
-    .form-group textarea:focus {
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
       border-color: var(--primary);
     }
 
@@ -622,7 +553,6 @@
       padding: 16px;
       margin-bottom: 14px;
     }
-
     .tooth-nav {
       display: flex;
       justify-content: space-between;
@@ -631,7 +561,6 @@
       font-size: 13px;
       font-weight: 600;
     }
-
     .btn-clear-teeth {
       background: none;
       border: none;
@@ -641,7 +570,6 @@
       font-size: 12px;
       text-decoration: underline;
     }
-
     .arch-wrapper {
       display: flex;
       flex-direction: column;
@@ -650,23 +578,9 @@
       overflow-x: auto;
       padding-bottom: 6px;
     }
-
-    .arch-line {
-      display: flex;
-      gap: 6px;
-      align-items: center;
-    }
-
-    .quad-cluster {
-      display: flex;
-      gap: 3px;
-      flex-wrap: nowrap;
-    }
-
-    .tooth-check {
-      display: none;
-    }
-
+    .arch-line { display: flex; gap: 6px; align-items: center; }
+    .quad-cluster { display: flex; gap: 3px; }
+    .tooth-check { display: none; }
     .tooth-btn {
       width: 28px;
       height: 28px;
@@ -681,18 +595,12 @@
       cursor: pointer;
       user-select: none;
     }
-
     .tooth-check:checked + .tooth-btn {
       background: var(--primary);
       color: #fff;
       border-color: var(--primary);
     }
-
-    .midline-bar {
-      width: 2px;
-      height: 24px;
-      background: #94a3b8;
-    }
+    .midline-bar { width: 2px; height: 24px; background: #94a3b8; }
 
     .radio-grid {
       display: grid;
@@ -700,21 +608,8 @@
       gap: 8px;
       margin-bottom: 12px;
     }
-
-    .radio-pill {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      font-size: 13px;
-      font-weight: 600;
-      cursor: pointer;
-    }
-
-    .radio-pill input {
-      accent-color: var(--primary);
-      width: 15px;
-      height: 15px;
-    }
+    .radio-pill { display: flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 600; cursor: pointer; }
+    .radio-pill input { accent-color: var(--primary); width: 15px; height: 15px; }
 
     .btn-submit-slip {
       background: var(--primary);
@@ -732,38 +627,23 @@
       gap: 8px;
       box-shadow: 0 4px 14px rgba(0, 77, 132, 0.22);
     }
+    .btn-submit-slip:hover { background: var(--primary-dark); }
 
-    .btn-submit-slip:hover {
-      background: var(--primary-dark);
-    }
-
-    /* Lab Coverage Bar */
     .lab-info-bar {
       background: #fff;
       border-top: 1px solid var(--border);
       border-bottom: 1px solid var(--border);
       padding: 36px 24px;
     }
-
     .info-bar-inner {
-      max-width: 1240px;
+      max-width: 1280px;
       margin: 0 auto;
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 24px;
     }
-
-    .info-card h4 {
-      font-size: 15px;
-      color: var(--brand-navy);
-      margin-bottom: 6px;
-    }
-
-    .info-card p {
-      font-size: 13px;
-      color: var(--text-muted);
-      line-height: 1.5;
-    }
+    .info-card h4 { font-size: 15px; color: var(--brand-navy); margin-bottom: 6px; }
+    .info-card p { font-size: 13px; color: var(--text-muted); line-height: 1.5; }
 
     footer {
       background: var(--brand-navy);
@@ -771,9 +651,8 @@
       padding: 30px 24px;
       font-size: 13px;
     }
-
     .footer-flex {
-      max-width: 1240px;
+      max-width: 1280px;
       margin: 0 auto;
       display: flex;
       justify-content: space-between;
@@ -799,84 +678,34 @@
       z-index: 999;
     }
 
-    /* Mobile Responsive Rules */
     @media (max-width: 900px) {
-      html, body {
-        overflow-x: hidden;
-        max-width: 100vw;
-      }
-      .nav-inner {
-        padding: 8px 14px;
-        width: 100%;
-      }
-      nav ul {
-        display: none; /* Collapses desktop text links on phone */
-      }
-      .brand-title {
-        font-size: 17px;
-      }
-      .brand-title span {
-        font-size: 9px;
-      }
-      .btn-nav-cta {
-        padding: 6px 12px;
-        font-size: 12px; /* Stays visible in top right */
-      }
-      .hero {
-        padding: 36px 14px 28px;
-      }
-      .hero h1 {
-        font-size: 26px;
-        word-break: break-word;
-      }
-      .hero p {
-        font-size: 14px;
-      }
-      .hero-cta-group {
-        flex-direction: column;
-        gap: 10px;
-      }
-      .btn-main, .btn-alt {
-        width: 100%;
-      }
-      .specs-strip {
-        grid-template-columns: 1fr 1fr;
-        gap: 8px;
-      }
-      .spec-card {
-        padding: 12px;
-      }
-      .spec-card .stat {
-        font-size: 20px;
-      }
-      .services-grid {
-        grid-template-columns: 1fr;
-      }
-      .grid-2 {
-        grid-template-columns: 1fr;
-      }
-      .portal-box {
-        padding: 20px 14px;
-      }
-      .table-container {
-        width: 100%;
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
-      }
+      .nav-inner { padding: 8px 14px; }
+      nav ul { display: none; }
+      .brand-title { font-size: 17px; }
+      .brand-title span { font-size: 9px; }
+      .btn-nav-cta { padding: 6px 12px; font-size: 12px; }
+      .hero { padding: 36px 14px 28px; }
+      .hero h1 { font-size: 26px; }
+      .hero p { font-size: 14px; }
+      .hero-cta-group { flex-direction: column; }
+      .btn-main, .btn-alt { width: 100%; }
+      .specs-strip { grid-template-columns: 1fr 1fr; gap: 8px; }
+      .services-grid, .gallery-container { grid-template-columns: 1fr; }
+      .grid-2 { grid-template-columns: 1fr; }
+      .portal-box { padding: 20px 14px; }
     }
   </style>
 </head>
 <body>
 
   <div class="top-strip">
-    📍 Dedicated B2B Dental Laboratory • Courier & Rider Pickups across <strong>Lahore, Pakistan</strong> (Gulberg, DHA, Iqbal Town, Johar Town, Model Town)
+    📍 Dedicated B2B Dental Laboratory • Courier &amp; Rider Pickups across <strong>Lahore, Pakistan</strong> (Gulberg, DHA, Iqbal Town, Johar Town, Model Town)
   </div>
 
   <header>
     <div class="nav-inner">
       <a href="#" class="brand-logo-wrap">
         <div class="logo-svg-container">
-          <!-- Embedded Dentorica SVG -->
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
             <path d="M 250,135 C 285,145 320,132 345,152 C 365,168 360,195 348,225 C 340,248 318,340 286,375 C 278,384 266,380 262,365 C 256,345 250,332 250,332 C 250,332 244,345 238,365 C 234,380 222,384 214,375 C 182,340 160,248 152,225 C 140,195 135,168 155,152 C 180,132 215,145 250,135 Z" fill="none" stroke="#1a2e40" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
             <path d="M 166,168 C 178,154 195,147 215,147 C 185,165 174,188 170,215 C 163,195 162,180 166,168 Z" fill="#008ecc"/>
@@ -890,17 +719,16 @@
         </div>
       </a>
 
-      <!-- Desktop Navigation Links -->
       <nav>
         <ul>
           <li><a href="#services">Services</a></li>
+          <li><a href="#portfolio" style="color: #008ecc; font-weight: 700;">Clinical Archive ↗</a></li>
           <li><a href="#materials">Materials</a></li>
           <li><a href="#workflow">Workflow</a></li>
           <li><a href="#contact-info">Coverage</a></li>
         </ul>
       </nav>
 
-      <!-- Persistent Dispatch CTA (Visible on both Desktop & Mobile) -->
       <a href="#portal" class="btn-nav-cta">Dispatch Case</a>
     </div>
   </header>
@@ -908,13 +736,11 @@
   <section class="hero">
     <div class="hero-content">
       <span class="badge-sub">Sub-Micron CAD/CAM Precision • Lahore</span>
-      <h1>Eliminate Chairside High-Spots & Occlusal Adjustments</h1>
+      <h1>Eliminate Chairside High-Spots &amp; Occlusal Adjustments</h1>
       <p>Dentorica Dental Lab delivers high-translucency CAD/CAM Zirconia, Exocad/3Shape STL designs, precision-layered PFM, flexible dentures, and Cast Partial Dentures (CPD) crafted for passive clinical seating.</p>
       
       <div class="hero-cta-group">
-        <a href="#portal" class="btn-main">
-          <span>🚀</span> Submit Digital Lab Slip
-        </a>
+        <a href="#portal" class="btn-main"><span>🚀</span> Submit Digital Lab Slip</a>
         <a href="https://wa.me/923084377295?text=Hello%20Dentorica%20Lab,%20I%20need%20a%20clinical%20courier%20pickup%20in%20Lahore." target="_blank" class="btn-alt">
           <span>📞</span> Request Rider Pickup
         </a>
@@ -941,7 +767,7 @@
     </div>
   </section>
 
-  <!-- Visual Services Showcase: 6 Distinct Images -->
+  <!-- Services Grid -->
   <section id="services" class="section-wrap">
     <div class="section-header">
       <h2>B2B Digital Dental Laboratory Services in Lahore</h2>
@@ -949,32 +775,30 @@
     </div>
 
     <div class="services-grid">
-      <!-- 1. Digital CAD Design (STL Export) -->
       <div class="service-box">
         <div class="service-img-wrap">
-          <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=75" alt="Dental CAD Design 3D Modeling" width="600" height="190" loading="lazy">
+          <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=75" alt="Dental CAD Design" loading="lazy">
           <span class="service-badge-tag">Design Service</span>
         </div>
         <div class="service-body">
           <h3>Digital CAD Design (STL Export)</h3>
-          <p>Outsourced 3D dental design for clinics with intraoral scanners or in-house milling centers. Anatomical crowns, bridges, veneers, and abutments designed in 3Shape & Exocad.</p>
+          <p>Outsourced 3D dental design for clinics with intraoral scanners or in-house milling centers. Anatomical crowns, bridges, and abutments designed in 3Shape &amp; Exocad.</p>
           <ul class="service-features">
             <li>Delivered in open STL, OBJ, or PLY formats</li>
-            <li>Calibrated cement gaps & dynamic contacts</li>
+            <li>Calibrated cement gaps &amp; dynamic contacts</li>
             <li>Fast 12 to 24-hour turnaround via Cloud link</li>
           </ul>
           <a href="#portal" class="service-order-link">Order STL Design Only →</a>
         </div>
       </div>
 
-      <!-- 2. CAD/CAM Zirconia -->
       <div class="service-box">
         <div class="service-img-wrap">
-          <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=600&q=75" alt="CAD CAM Multi-Layer Zirconia Crown" width="600" height="190" loading="lazy">
+          <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=600&q=75" alt="CAD CAM Multi-Layer Zirconia Crown" loading="lazy">
           <span class="service-badge-tag">CAD/CAM Restorations</span>
         </div>
         <div class="service-body">
-          <h3>Multi-Layer & Monolithic Zirconia</h3>
+          <h3>Multi-Layer &amp; Monolithic Zirconia</h3>
           <p>Milled on 5-axis dry systems using German and Japanese multi-layer blanks. Graded incisal translucency for anterior aesthetics with up to 1200+ MPa strength for posterior bridges.</p>
           <ul class="service-features">
             <li>Zero black cervical margin line</li>
@@ -985,15 +809,14 @@
         </div>
       </div>
 
-      <!-- 3. Precision PFM (Non-CAD/CAM) -->
       <div class="service-box">
         <div class="service-img-wrap">
-          <img src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&w=600&q=75" alt="Precision Layered PFM Crown Restoration" width="600" height="190" loading="lazy">
+          <img src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&w=600&q=75" alt="Precision Layered PFM" loading="lazy">
           <span class="service-badge-tag">Ceramic Layering</span>
         </div>
         <div class="service-body">
           <h3>Precision Layered PFM</h3>
-          <p>Hand-waxed, cast alloy copings layered with natural feldspathic porcelain. Provides reliable strength for multi-unit bridges and masks severely discolored stumps or metal post foundations.</p>
+          <p>Hand-waxed, cast alloy copings layered with natural feldspathic porcelain. Provides reliable strength for multi-unit bridges and masks severely discolored stumps or metal posts.</p>
           <ul class="service-features">
             <li>Medical-grade non-precious alloy casting</li>
             <li>Hand-built feldspathic ceramic anatomy</li>
@@ -1003,28 +826,26 @@
         </div>
       </div>
 
-      <!-- 4. Flexible Partial Dentures -->
       <div class="service-box">
         <div class="service-img-wrap">
-          <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=600&q=75" alt="Flexible Partial Denture" width="600" height="190" loading="lazy">
+          <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=600&q=75" alt="Flexible Partial Denture" loading="lazy">
           <span class="service-badge-tag">Removable Prosthetics</span>
         </div>
         <div class="service-body">
           <h3>Flexible Partial Dentures</h3>
           <p>Thermal-injected polyamide nylon resin dentures. Lightweight, break-resistant, and designed with tissue-colored retentive clasps that blend naturally without visible metal hooks.</p>
           <ul class="service-features">
-            <li>Biocompatible, monomer-free & hypoallergenic</li>
+            <li>Biocompatible, monomer-free &amp; hypoallergenic</li>
             <li>Tissue-supported gentle retention</li>
-            <li>Fast adaptation for unilateral or bilateral cases</li>
+            <li>Fast adaptation for bounded aesthetic spaces</li>
           </ul>
           <a href="#portal" class="service-order-link">Order Flexible Denture →</a>
         </div>
       </div>
 
-      <!-- 5. Cast Partial Dentures (Co-Cr CPD) -->
       <div class="service-box">
         <div class="service-img-wrap">
-          <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=600&q=75" alt="Cast Partial Denture Metal Framework" width="600" height="190" loading="lazy">
+          <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=600&q=75" alt="Cast Partial Denture Metal Framework" loading="lazy">
           <span class="service-badge-tag">Cast Metal Framework</span>
         </div>
         <div class="service-body">
@@ -1033,20 +854,19 @@
           <ul class="service-features">
             <li>Definite tooth-borne and tissue-borne support</li>
             <li>Slim, non-bulky lingual bars or palatal plates</li>
-            <li>High mechanical strength & long-term stability</li>
+            <li>High mechanical strength &amp; long-term stability</li>
           </ul>
           <a href="#portal" class="service-order-link">Order CPD Framework →</a>
         </div>
       </div>
 
-      <!-- 6. Orthodontic Clear Aligners -->
       <div class="service-box">
         <div class="service-img-wrap">
-          <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=600&q=75" alt="Clear Orthodontic Aligners" width="600" height="190" loading="lazy">
+          <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=600&q=75" alt="Clear Orthodontic Aligners" loading="lazy">
           <span class="service-badge-tag">Orthodontics</span>
         </div>
         <div class="service-body">
-          <h3>Clear Aligners & Retainers</h3>
+          <h3>Clear Aligners &amp; Retainers</h3>
           <p>Staged digital alignment sequences planned in 3D CAD and pressure-thermoformed with multi-layer foils. Delivers smooth, predictable tooth movement for spacing and crowding.</p>
           <ul class="service-features">
             <li>Optically transparent medical thermoplastic</li>
@@ -1059,7 +879,266 @@
     </div>
   </section>
 
-  <!-- Technical Material Specifications Matrix -->
+  <!-- Complete Clinical Bench Archive -->
+  <section id="portfolio" class="section-wrap" style="padding-top: 0;">
+    <div class="section-header">
+      <span class="badge-sub">Clinical Excellence &amp; Bench Seating</span>
+      <h2>Real Bench Cases &amp; CAD Framework Archive</h2>
+      <p>Every restoration is physically mounted, articulated, and bench-inspected on ditched working dies before courier delivery to dental practices across Lahore.</p>
+    </div>
+
+    <!-- Filter Buttons -->
+    <div class="portfolio-tabs">
+      <button class="tab-btn active" onclick="applyFilter('all', this)">All Real Cases</button>
+      <button class="tab-btn" onclick="applyFilter('fixed', this)">Fixed Bridges &amp; Crowns</button>
+      <button class="tab-btn" onclick="applyFilter('cad', this)">Digital CAD (Exocad/3Shape)</button>
+      <button class="tab-btn" onclick="applyFilter('cocr', this)">Co-Cr Frameworks</button>
+      <button class="tab-btn" onclick="applyFilter('dentures', this)">Dentures &amp; Flexible</button>
+    </div>
+
+    <!-- The 18-Case Gallery with Renamed Safe Filenames -->
+    <div class="gallery-container">
+
+      <!-- 1. Flexible Anterior -->
+      <div class="case-card" data-category="dentures" onclick="openLightbox('case-1.jpg', 'Anterior Flexible Partial Denture', 'Thermal-injected biocompatible polyamide nylon featuring translucent tissue-colored clasps that eliminate silver metal hooks in the smile line.')">
+        <div class="media-box">
+          <img src="case-1.jpg" alt="Anterior Flexible Partial Denture" loading="lazy">
+          <span class="badge">Flexible Polyamide</span>
+        </div>
+        <div class="case-details">
+          <h3>Anterior Flexible Partial (Tissue-Borne)</h3>
+          <p>4-unit replacement with tissue-toned clasps for invisible retention in bounded spaces.</p>
+          <div class="specs-list"><span>• Unbreakable Base</span><span>• Monomer-Free</span><span>• 48h Turnaround</span></div>
+        </div>
+      </div>
+
+      <!-- 2. Posterior Bridge Seated Lateral Die -->
+      <div class="case-card" data-category="fixed" onclick="openLightbox('case-2.jpg', 'Posterior Molar Bridge Model Seating', 'Multi-unit restoration seated on segmented master die showing Ditched margins and interproximal contact calibration.')">
+        <div class="media-box">
+          <img src="case-2.jpg" alt="Posterior Molar Bridge Model Seating" loading="lazy">
+          <span class="badge">CAD/CAM Fixed</span>
+        </div>
+        <div class="case-details">
+          <h3>Posterior Molar Bridge &amp; Die Margin</h3>
+          <p>Inspected on segmented stone working cast for sub-micron passive seating.</p>
+          <div class="specs-list"><span>• Ditched Margins</span><span>• ±5 µm Fitting</span><span>• Passive Fit</span></div>
+        </div>
+      </div>
+
+      <!-- 3. Posterior Occlusal Anatomy & Contact Foil -->
+      <div class="case-card" data-category="fixed" onclick="openLightbox('case-3.jpg', 'Occlusal Articulating Contact Verification', 'Occlusal view on stone arch displaying blue and red articulating paper marks confirming balanced centric contacts.')">
+        <div class="media-box">
+          <img src="case-3.jpg" alt="Occlusal Articulating Contact Verification" loading="lazy">
+          <span class="badge">Occlusal Balance</span>
+        </div>
+        <div class="case-details">
+          <h3>Occlusal Surface &amp; Centric Verification</h3>
+          <p>Articulating foil testing on anatomical fissures ensures zero chairside grinding.</p>
+          <div class="specs-list"><span>• Contact Calibrated</span><span>• Anatomical Sulci</span><span>• Zero High-Spots</span></div>
+        </div>
+      </div>
+
+      <!-- 4. Posterior Bridge Lingual Clearance -->
+      <div class="case-card" data-category="fixed" onclick="openLightbox('case-4.jpg', 'Lingual Emergence & Die Inspection', 'Close-up perspective of crown-to-die margin integrity and embrasure spacing.')">
+        <div class="media-box">
+          <img src="case-4.jpg" alt="Lingual Emergence & Die Inspection" loading="lazy">
+          <span class="badge">Margin Seal</span>
+        </div>
+        <div class="case-details">
+          <h3>Lingual Emergence &amp; Proximal Contour</h3>
+          <p>Smooth emergence profile preserves biological width and interdental hygiene access.</p>
+          <div class="specs-list"><span>• Hygiene Access</span><span>• Polish Intaglio</span><span>• Precision Collar</span></div>
+        </div>
+      </div>
+
+      <!-- 5. Full-Arch Articulation Video -->
+      <div class="case-card" data-category="fixed" onclick="openLightboxVideo('video-1.mp4', 'Full-Arch Mechanical Articulation (Video)', 'Bench video showing bilateral balanced articulation, canine guidance, and excursive movement clearance.')">
+        <div class="media-box">
+          <video autoplay muted loop playsinline poster="case-5.jpg">
+            <source src="video-1.mp4" type="video/mp4">
+          </video>
+          <span class="badge">Articulated Video</span>
+        </div>
+        <div class="case-details">
+          <h3>Full-Arch Bilateral Occlusion (Video)</h3>
+          <p>Dual-arch reconstruction bench-verified on a mechanical hinge articulator.</p>
+          <div class="specs-list"><span>• Centric Relation</span><span>• Canine Guidance</span><span>• Pink Ceramic</span></div>
+        </div>
+      </div>
+
+      <!-- 6. Full-Arch Aesthetic Smile Arc -->
+      <div class="case-card" data-category="fixed" onclick="openLightbox('case-5.jpg', 'Maxillary Smile Arc Reconstruction', 'Hand-layered ceramic with natural incisal translucency and customized gingival pink porcelain.')">
+        <div class="media-box">
+          <img src="case-5.jpg" alt="Maxillary Smile Arc Reconstruction" loading="lazy">
+          <span class="badge">Aesthetic Rehab</span>
+        </div>
+        <div class="case-details">
+          <h3>Maxillary Aesthetic Smile Arc</h3>
+          <p>Multi-unit anterior reconstruction with customized pink ceramic integration.</p>
+          <div class="specs-list"><span>• Incisal Translucency</span><span>• Pink Ceramic</span><span>• High Vitality</span></div>
+        </div>
+      </div>
+
+      <!-- 7. Pre-Op Bite Registration Master Models -->
+      <div class="case-card" data-category="fixed" onclick="openLightbox('case-6.jpg', 'Pre-Op Articulated Master Casts', 'Pre-restoration casts mounted on articulator with multi-colored contact marks for bite reference.')">
+        <div class="media-box">
+          <img src="case-6.jpg" alt="Pre-Op Articulated Master Casts" loading="lazy">
+          <span class="badge">Master Casts</span>
+        </div>
+        <div class="case-details">
+          <h3>Pre-Op Occlusal Master Study Models</h3>
+          <p>Articulated upper and lower stone study models recording vertical dimension.</p>
+          <div class="specs-list"><span>• VDO Mapping</span><span>• Occlusal Study</span><span>• Accurate Planes</span></div>
+        </div>
+      </div>
+
+      <!-- 8. Maxillary Fixed Framework Frontal View -->
+      <div class="case-card" data-category="fixed" onclick="openLightbox('case-7.jpg', 'Maxillary Anterior Framework Alignment', 'Frontal profile showing axial inclinations and symmetrical cervical line angles.')">
+        <div class="media-box">
+          <img src="case-7.jpg" alt="Maxillary Anterior Framework Alignment" loading="lazy">
+          <span class="badge">Anterior Esthetics</span>
+        </div>
+        <div class="case-details">
+          <h3>Anterior Framework Alignment &amp; Symmetry</h3>
+          <p>Symmetrical incisal edge alignment matched to the lower lip curvature.</p>
+          <div class="specs-list"><span>• Lip-Line Harmony</span><span>• Axial Tilt</span><span>• Line Angles</span></div>
+        </div>
+      </div>
+
+      <!-- 9. Co-Cr CPD Framework on Articulator -->
+      <div class="case-card" data-category="cocr" onclick="openLightbox('case-8.jpg', 'Bilateral Co-Cr CPD on Mechanical Articulator', 'Medical cobalt-chromium cast partial denture with posterior acrylic saddles mounted on cast articulator.')">
+        <div class="media-box">
+          <img src="case-8.jpg" alt="Bilateral Co-Cr CPD on Articulator" loading="lazy">
+          <span class="badge">Co-Cr CPD</span>
+        </div>
+        <div class="case-details">
+          <h3>Bilateral Co-Cr Partial Framework</h3>
+          <p>Rigid major connector with precision rests transferring load along natural abutments.</p>
+          <div class="specs-list"><span>• Medical Co-Cr</span><span>• Tooth-Borne Rests</span><span>• High Polish</span></div>
+        </div>
+      </div>
+
+      <!-- 10. Digital CAD Mesh Lower Jaw -->
+      <div class="case-card" data-category="cad" onclick="openLightbox('case-9.jpg', 'Digital Retention Mesh CAD Architecture', 'Exocad 3D modeling of mandibular alveolar retention mesh for mechanical acrylic locking.')">
+        <div class="media-box">
+          <img src="case-9.jpg" alt="Digital Retention Mesh CAD" loading="lazy">
+          <span class="badge">Digital 3D CAD</span>
+        </div>
+        <div class="case-details">
+          <h3>Mandibular Retention Mesh 3D CAD</h3>
+          <p>Engineered lattice structures optimize mechanical locking without ridge bulk.</p>
+          <div class="specs-list"><span>• Open STL Export</span><span>• SLM Ready</span><span>• Calibrated Thickness</span></div>
+        </div>
+      </div>
+
+      <!-- 11. Digital Surveying & Undercut Analysis -->
+      <div class="case-card" data-category="cad" onclick="openLightbox('case-10.jpg', 'Exocad Digital Path of Insertion Survey', 'Digital undercut depth mapping identifying ideal retentive clasp zones and guide plane paths.')">
+        <div class="media-box">
+          <img src="case-10.jpg" alt="Digital Path of Insertion Survey" loading="lazy">
+          <span class="badge">CAD Surveying</span>
+        </div>
+        <div class="case-details">
+          <h3>Path of Insertion &amp; Undercut Survey</h3>
+          <p>Pre-milling digital survey in 3Shape/Exocad for passive framework seating.</p>
+          <div class="specs-list"><span>• Undercut Map</span><span>• Guide Planes</span><span>• Zero Interference</span></div>
+        </div>
+      </div>
+
+      <!-- 12. Mandibular Major Connector CAD -->
+      <div class="case-card" data-category="cad" onclick="openLightbox('case-11.jpg', 'Mandibular Major Connector CAD Design', 'Sublingual relief and cross-arch stabilization bars designed on 3D virtual cast.')">
+        <div class="media-box">
+          <img src="case-11.jpg" alt="Mandibular Major Connector CAD" loading="lazy">
+          <span class="badge">Digital 3D CAD</span>
+        </div>
+        <div class="case-details">
+          <h3>Sublingual Major Connector CAD Model</h3>
+          <p>Mucosal relief calibration prevents frenum impingement while maintaining rigidity.</p>
+          <div class="specs-list"><span>• Frenum Relief</span><span>• Rigid Cross-Arch</span><span>• Digital Waxing</span></div>
+        </div>
+      </div>
+
+      <!-- 13. Sublingual Plate CAD Architecture -->
+      <div class="case-card" data-category="cad" onclick="openLightbox('case-12.jpg', 'Sublingual Plate & Minor Connectors', 'Virtual framework inspection showing minor connectors and clasp arm take-offs.')">
+        <div class="media-box">
+          <img src="case-12.jpg" alt="Sublingual Plate & Minor Connectors" loading="lazy">
+          <span class="badge">Digital 3D CAD</span>
+        </div>
+        <div class="case-details">
+          <h3>Lingual Plate &amp; Minor Connectors</h3>
+          <p>Precision-sculpted clasp take-offs engineered for uniform flexural memory.</p>
+          <div class="specs-list"><span>• Clasp Taper</span><span>• High Memory</span><span>• Precision Rests</span></div>
+        </div>
+      </div>
+
+      <!-- 14. Maxillary Horseshoe Palatal CAD -->
+      <div class="case-card" data-category="cad" onclick="openLightbox('case-13.jpg', 'Maxillary Horseshoe Palatal Major Connector', 'Virtual design of maxillary palatal strap framework preserving phonetics and taste sensation.')">
+        <div class="media-box">
+          <img src="case-13.jpg" alt="Maxillary Horseshoe Palatal Major Connector" loading="lazy">
+          <span class="badge">Palatal CAD</span>
+        </div>
+        <div class="case-details">
+          <h3>Maxillary Palatal Framework CAD</h3>
+          <p>Anatomically contoured palatal strap designed to preserve natural speech phonetics.</p>
+          <div class="specs-list"><span>• Reduced Bulk</span><span>• Speech Friendly</span><span>• Anatomical Contours</span></div>
+        </div>
+      </div>
+
+      <!-- 15. Bilateral Akers Clasp CAD Model -->
+      <div class="case-card" data-category="cad" onclick="openLightbox('case-14.jpg', 'Bilateral Akers Clasp Design in 3D', 'Occlusal rests and circumferential clasp arms modeled in Exocad.')">
+        <div class="media-box">
+          <img src="case-14.jpg" alt="Bilateral Akers Clasp Design in 3D" loading="lazy">
+          <span class="badge">Clasp Design</span>
+        </div>
+        <div class="case-details">
+          <h3>Bilateral Akers Clasp Architecture</h3>
+          <p>Reciprocal arms engineered above survey lines to counteract horizontal forces.</p>
+          <div class="specs-list"><span>• Reciprocal Arms</span><span>• Accurate Rest Seats</span><span>• Smooth Finish</span></div>
+        </div>
+      </div>
+
+      <!-- 16. Lower Anterior Prep on Firing Tray -->
+      <div class="case-card" data-category="fixed" onclick="openLightbox('case-15.jpg', 'Mandibular Anterior Prep Cast on Honeycomb Tray', 'Segmented incisor cores showing chamfer preparations and resorbed alveolar ridge before bridge seating.')">
+        <div class="media-box">
+          <img src="case-15.jpg" alt="Mandibular Anterior Prep Cast" loading="lazy">
+          <span class="badge">Preparation Model</span>
+        </div>
+        <div class="case-details">
+          <h3>Mandibular Anterior Prep Model</h3>
+          <p>Cast on sintering honeycomb tray ready for multi-unit ceramic firing.</p>
+          <div class="specs-list"><span>• Chamfer Preps</span><span>• Ridge Mapping</span><span>• Master Dies</span></div>
+        </div>
+      </div>
+
+      <!-- 17. Lower Anterior Bridge with Pink Tissue Ceramic -->
+      <div class="case-card" data-category="fixed" onclick="openLightbox('case-16.jpg', 'Mandibular Anterior Bridge with Pink Ceramic', '6-unit restoration seated on prep cast showing custom-shaded gingival porcelain restoring papilla height.')">
+        <div class="media-box">
+          <img src="case-16.jpg" alt="Mandibular Anterior Bridge with Pink Ceramic" loading="lazy">
+          <span class="badge">Gingival Ceramic</span>
+        </div>
+        <div class="case-details">
+          <h3>Lower Anterior Pink Ceramic Bridge</h3>
+          <p>Custom-shaded tissue porcelain masks ridge resorption and eliminates black triangles.</p>
+          <div class="specs-list"><span>• Pink Papillae</span><span>• Zero Black Triangles</span><span>• Passive Seat</span></div>
+        </div>
+      </div>
+
+      <!-- 18. Upper Anterior B1 Shade Bridge -->
+      <div class="case-card" data-category="fixed" onclick="openLightbox('case-17.jpg', 'Maxillary Anterior B1 Shade Bridge', '4-unit bridge seated on articulated cast showcasing VITA B1 vitality, natural embrasures, and canine clearance.')">
+        <div class="media-box">
+          <img src="case-17.jpg" alt="Maxillary Anterior B1 Shade Bridge" loading="lazy">
+          <span class="badge">Aesthetic Crown</span>
+        </div>
+        <div class="case-details">
+          <h3>Maxillary Anterior Smile Arc (Shade B1)</h3>
+          <p>Natural incisal embrasures and line angles aligned with doctor's B1 shade prescription.</p>
+          <div class="specs-list"><span>• VITA Shade B1</span><span>• Incisal Embrasures</span><span>• Canine Guidance</span></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Materials Selection Matrix -->
   <section id="materials" class="section-wrap" style="padding-top: 0;">
     <div class="section-header">
       <h2>Restoration Material Selection Matrix</h2>
@@ -1079,22 +1158,15 @@
         </thead>
         <tbody>
           <tr>
-            <td><strong>Multi-Layer Zirconia</strong></td>
-            <td>5Y-PSZ Polycrystalline Ceramic (CAD/CAM)</td>
-            <td>850 – 1050 MPa</td>
-            <td>Anterior cosmetic crowns, 3-unit bridges</td>
-            <td>Rounded Shoulder (1.0 mm)</td>
-          </tr>
-          <tr>
-            <td><strong>Monolithic Zirconia</strong></td>
-            <td>3Y-TZP High-Strength Blank (CAD/CAM)</td>
-            <td>1200 – 1400 MPa</td>
-            <td>Posterior molars, bruxers, long bridges</td>
-            <td>Deep Chamfer (0.8 mm)</td>
+            <td><strong>Full-Contour Zirconia</strong></td>
+            <td>Multi-Layer 5Y/4Y Gradient or 3Y Monolithic</td>
+            <td>900 – 1400 MPa</td>
+            <td>Anterior cosmetics, heavy bruxers &amp; long bridges</td>
+            <td>Chamfer (0.8–1.0 mm)</td>
           </tr>
           <tr>
             <td><strong>Precision PFM</strong></td>
-            <td>Cast Alloy Substructure + Feldspathic Ceramic</td>
+            <td>Cast Non-Precious Alloy + Feldspathic Ceramic</td>
             <td>~450 MPa (Ceramic)</td>
             <td>Dark stumps, metal post-and-cores, bridges</td>
             <td>Deep Chamfer / Shoulder (1.2 mm)</td>
@@ -1104,14 +1176,14 @@
             <td>Polyamide Hypoallergenic Nylon</td>
             <td>High Flexibility</td>
             <td>Aesthetic tissue-borne edentulous zones</td>
-            <td>Rest seats & PVS impression</td>
+            <td>Rest seats &amp; PVS impression</td>
           </tr>
           <tr>
             <td><strong>Cast Partial (CPD)</strong></td>
             <td>Medical Cobalt-Chromium Alloy</td>
             <td>High Rigidity</td>
             <td>Definite tooth-borne partial rehabilitation</td>
-            <td>Guide planes & saucer rests</td>
+            <td>Guide planes &amp; saucer rests</td>
           </tr>
           <tr>
             <td><strong>Dental CAD Design</strong></td>
@@ -1147,7 +1219,7 @@
 
       <div class="step-box">
         <div class="step-num">3</div>
-        <h4>Milling & Layering</h4>
+        <h4>Milling &amp; Layering</h4>
         <p>Restorations are milled or cast, sintered, hand-layered with ceramics, and bench-checked on dies.</p>
       </div>
 
@@ -1159,7 +1231,7 @@
     </div>
   </section>
 
-  <!-- Interactive Digital Prescription Order Portal -->
+  <!-- Digital Prescription Slip Order Portal -->
   <section id="portal" class="order-section-bg">
     <div class="portal-box">
       <div class="portal-title-bar">
@@ -1168,14 +1240,14 @@
       </div>
 
       <form onsubmit="handleDigitalOrder(event)">
-        <div class="portal-section-tag">1. Clinic & Doctor Details</div>
+        <div class="portal-section-tag">1. Clinic &amp; Doctor Details</div>
         <div class="grid-2">
           <div class="form-group">
             <label>Dentist Name *</label>
             <input type="text" id="drName" required placeholder="e.g. Dr. Salman Tariq">
           </div>
           <div class="form-group">
-            <label>Clinic Name & Area *</label>
+            <label>Clinic Name &amp; Area *</label>
             <input type="text" id="clinicName" required placeholder="e.g. Tariq Dental, DHA Phase 5, Lahore">
           </div>
         </div>
@@ -1191,7 +1263,6 @@
           </div>
         </div>
 
-        <!-- Tooth Chart FDI -->
         <div class="portal-section-tag">
           <span>2. Select Units (FDI Chart)</span>
           <button type="button" class="btn-clear-teeth" onclick="clearSelectedTeeth()">Clear Units</button>
@@ -1255,16 +1326,14 @@
           </div>
         </div>
 
-        <!-- Material & Specs -->
-        <div class="portal-section-tag">3. Prosthetic Service & Shades</div>
+        <div class="portal-section-tag">3. Prosthetic Service &amp; Shades</div>
         <div class="grid-2">
           <div class="form-group">
             <label>Service / Restoration Type *</label>
             <select id="systemChoice" required>
               <option value="">-- Choose Category --</option>
+              <option value="Full-Contour CAD/CAM Zirconia">Full-Contour CAD/CAM Zirconia (Multi-Layer / Monolithic)</option>
               <option value="CAD Design Only (STL File Export)">Digital CAD Design Only (Open STL Export)</option>
-              <option value="CAD/CAM Multi-Layer Aesthetic Zirconia">CAD/CAM Multi-Layer Aesthetic Zirconia</option>
-              <option value="Full-Contour Monolithic Zirconia (CAD/CAM)">Full-Contour Monolithic Zirconia (CAD/CAM)</option>
               <option value="Precision Layered PFM (Non-CAD/CAM)">Precision Layered PFM</option>
               <option value="Flexible Partial Denture (Polyamide)">Flexible Partial Denture (Polyamide)</option>
               <option value="Cast Partial Denture (Co-Cr CPD)">Cast Partial Denture (Co-Cr CPD)</option>
@@ -1296,8 +1365,7 @@
           </div>
         </div>
 
-        <!-- Occlusion & Upload -->
-        <div class="portal-section-tag">4. Occlusion & File Dispatch</div>
+        <div class="portal-section-tag">4. Occlusion &amp; File Dispatch</div>
         <div class="radio-grid">
           <label class="radio-pill"><input type="radio" name="occlusion" value="Tight Contact" checked> Tight Centric Contact</label>
           <label class="radio-pill"><input type="radio" name="occlusion" value="Light Passive"> Light / Passive Contact</label>
@@ -1329,39 +1397,85 @@
         <p>Dentorica Dental Lab<br>Satluj Block, Allama Iqbal Town, Lahore, Pakistan</p>
       </div>
       <div class="info-card">
-        <h4>📞 Phone & Case Support</h4>
+        <h4>📞 Phone &amp; Case Support</h4>
         <p>Lab Line: 0311-4289005<br>Dispatch: 0308-4377295<br>Email: cases@dentorica.com</p>
       </div>
       <div class="info-card">
         <h4>🛵 Lahore Courier Coverage</h4>
-        <p>Morning & Afternoon daily pickups across DHA (Phases 1-8), Gulberg, Johar Town, Iqbal Town, Model Town & Garden Town.</p>
+        <p>Morning &amp; Afternoon daily pickups across DHA (Phases 1-8), Gulberg, Johar Town, Iqbal Town, Model Town &amp; Garden Town.</p>
       </div>
     </div>
   </section>
 
+  <!-- Lightbox Modal Popup -->
+  <div id="lightboxModal" class="lightbox-modal" onclick="closeLightbox(event)">
+    <div class="lightbox-content" onclick="event.stopPropagation()">
+      <button class="close-lightbox" onclick="closeLightbox()">✕</button>
+      <div class="lightbox-preview-wrap" id="lightboxMediaContainer"></div>
+      <div class="lightbox-info">
+        <h3 id="lightboxTitle">Case Title</h3>
+        <p id="lightboxDesc">Case Description</p>
+      </div>
+    </div>
+  </div>
+
   <footer>
     <div class="footer-flex">
-      <div>
-        © 2026 Dentorica Digital Dental Lab. All rights reserved. | Precision B2B Prosthetics Lahore.
-      </div>
+      <div>© 2026 Dentorica Digital Dental Lab. All rights reserved. | Precision B2B Prosthetics Lahore.</div>
       <div>
         <a href="#services" style="color: #cbd5e1; margin-right: 14px;">Services</a>
-        <a href="#materials" style="color: #cbd5e1; margin-right: 14px;">Materials</a>
+        <a href="#portfolio" style="color: #cbd5e1; margin-right: 14px;">Portfolio</a>
         <a href="#portal" style="color: #cbd5e1; margin-right: 14px;">Lab Slip</a>
         <a href="https://wa.me/923084377295" target="_blank" style="color: #38bdf8;">WhatsApp Direct Desk</a>
       </div>
     </div>
   </footer>
 
-  <!-- Direct Floating WhatsApp Button -->
   <a href="https://wa.me/923084377295?text=Hello%20Dentorica%20Lab,%20I%20have%20a%20clinical%20case%20or%20STL%20inquiry." target="_blank" class="floating-wa" title="Message Dentorica Lab">
     💬
   </a>
 
-  <!-- JavaScript Slip Processing -->
+  <!-- JavaScript Functions -->
   <script>
     function clearSelectedTeeth() {
       document.querySelectorAll('input[name="fdi"]').forEach(cb => cb.checked = false);
+    }
+
+    function applyFilter(category, btn) {
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const cards = document.querySelectorAll('.case-card');
+      cards.forEach(card => {
+        if (category === 'all' || card.getAttribute('data-category') === category) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    function openLightbox(imgSrc, title, desc) {
+      const container = document.getElementById('lightboxMediaContainer');
+      container.innerHTML = `<img src="${imgSrc}" alt="${title}">`;
+      document.getElementById('lightboxTitle').innerText = title;
+      document.getElementById('lightboxDesc').innerText = desc;
+      document.getElementById('lightboxModal').style.display = 'flex';
+    }
+
+    function openLightboxVideo(videoSrc, title, desc) {
+      const container = document.getElementById('lightboxMediaContainer');
+      container.innerHTML = `<video controls autoplay loop playsinline style="max-width:100%; max-height:65vh;"><source src="${videoSrc}" type="video/mp4"></video>`;
+      document.getElementById('lightboxTitle').innerText = title;
+      document.getElementById('lightboxDesc').innerText = desc;
+      document.getElementById('lightboxModal').style.display = 'flex';
+    }
+
+    function closeLightbox() {
+      const modal = document.getElementById('lightboxModal');
+      const container = document.getElementById('lightboxMediaContainer');
+      modal.style.display = 'none';
+      container.innerHTML = '';
     }
 
     function handleDigitalOrder(e) {
