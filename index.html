@@ -8,9 +8,21 @@
   <link rel="canonical" href="https://dentorica.com/">
 
   <!-- Vector Favicon -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 500 500'><path d='M250,135 C285,145 320,132 345,152 C365,168 360,195 348,225 C340,248 318,340 286,375 C278,384 266,380 262,365 C256,345 250,332 250,332 C250,332 244,345 238,365 C234,380 222,384 214,375 C182,340 160,248 152,225 C140,195 135,168 155,152 C180,132 215,145 250,135 Z' fill='none' stroke='%231a2e40' stroke-width='24'/><path d='M166,168 C178,154 195,147 215,147 C185,165 174,188 170,215 C163,195 162,180 166,168 Z' fill='%23008ecc'/><path d='M250,305 C238,285 208,255 208,225 C208,198 230,188 250,210 C270,188 292,198 292,225 C292,255 262,285 250,305 Z' fill='none' stroke='%231a2e40' stroke-width='20'/></svg>">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 500 500'><path d='M250,135 C285,145 320,132 345,152 C365,168 360,195 348,225 C340,248 318,340 286,375 C278,384 266,380 262,365 C256,345 250,332 250,332 C250,332 244,345 238,365 C234,380 222,384 214,375 C182,340 160,248 152,225 C140,195 135,168 155,152 C180,132 215,145 250,135 Z' fill='none' stroke='%2338bdf8' stroke-width='24'/><path d='M166,168 C178,154 195,147 215,147 C185,165 174,188 170,215 C163,195 162,180 166,168 Z' fill='%23008ecc'/><path d='M250,305 C238,285 208,255 208,225 C208,198 230,188 250,210 C270,188 292,198 292,225 C292,255 262,285 250,305 Z' fill='none' stroke='%2338bdf8' stroke-width='20'/></svg>">
 
-  <!-- Local SEO Medical Business Schema Markup -->
+  <!-- Search Console Verification Placeholder -->
+  <!-- <meta name="google-site-verification" content="YOUR_VERIFICATION_STRING_HERE" /> -->
+
+  <!-- Google Analytics 4 (GA4) Global Site Tag -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX', { 'send_page_view': true });
+  </script>
+
+  <!-- Complete Local SEO Schema Markup -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -19,6 +31,9 @@
     "url": "https://dentorica.com/",
     "telephone": "+923084377295",
     "priceRange": "$$",
+    "sameAs": [
+      "https://www.linkedin.com/company/144919016/"
+    ],
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Satluj Block, Allama Iqbal Town",
@@ -36,8 +51,8 @@
       "Lahore", "Gulberg", "DHA Lahore", "Johar Town", "Allama Iqbal Town", "Model Town", "Garden Town"
     ],
     "knowsAbout": [
-      "CAD/CAM Zirconia",
-      "Exocad 3Shape STL Design",
+      "CAD/CAM Multi-Layer Zirconia",
+      "Exocad 3Shape STL Modeling",
       "Precision Layered PFM",
       "Cast Partial Dentures CPD",
       "Flexible Partial Dentures",
@@ -48,78 +63,79 @@
 
   <style>
     :root {
-      --brand-navy: #1a2e40;
-      --brand-blue: #008ecc;
-      --primary: #004d84;
-      --primary-dark: #002e50;
-      --primary-light: #e8f4fc;
-      --text-dark: #0f172a;
-      --text-body: #334155;
-      --text-muted: #64748b;
-      --bg-page: #f8fafc;
-      --bg-card: #ffffff;
-      --border: #e2e8f0;
+      --bg-dark: #070d14;
+      --bg-surface: #0e1824;
+      --bg-card: rgba(16, 28, 43, 0.75);
+      --border-subtle: rgba(56, 189, 248, 0.12);
+      --primary-cyan: #38bdf8;
+      --primary-blue: #008ecc;
+      --primary-dark: #006b99;
+      --text-main: #f1f5f9;
+      --text-muted: #94a3b8;
+      --text-faint: #64748b;
       --radius-sm: 8px;
       --radius-md: 14px;
-      --radius-lg: 20px;
-      --shadow-sm: 0 2px 6px rgba(0,0,0,0.04);
-      --shadow-md: 0 12px 30px -5px rgba(0, 77, 132, 0.08);
-      --shadow-lg: 0 20px 40px -10px rgba(0, 77, 132, 0.14);
+      --radius-lg: 22px;
+      --shadow-soft: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+      --shadow-glow: 0 0 25px rgba(56, 189, 248, 0.15);
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html, body {
       overflow-x: hidden;
       width: 100%;
-      background-color: var(--bg-page);
-      color: var(--text-body);
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Inter", sans-serif;
       line-height: 1.6;
       -webkit-font-smoothing: antialiased;
     }
 
-    h1, h2, h3, h4 { color: var(--text-dark); font-weight: 700; line-height: 1.2; }
-    a { color: var(--primary); text-decoration: none; transition: all 0.2s ease; }
+    h1, h2, h3, h4 { color: #ffffff; font-weight: 700; line-height: 1.25; }
+    a { color: var(--primary-cyan); text-decoration: none; transition: all 0.2s ease; }
 
     .top-strip {
-      background: var(--brand-navy);
-      color: #e2e8f0;
+      background: linear-gradient(90deg, #09131d 0%, #102133 50%, #09131d 100%);
+      color: var(--text-muted);
       font-size: 13px;
-      padding: 8px 16px;
+      padding: 9px 16px;
       text-align: center;
       font-weight: 500;
+      border-bottom: 1px solid var(--border-subtle);
     }
-    .top-strip strong { color: #38bdf8; }
+    .top-strip strong { color: var(--primary-cyan); }
 
+    /* Glassmorphic Sticky Header */
     header {
       position: sticky;
       top: 0;
-      background: rgba(255, 255, 255, 0.98);
-      backdrop-filter: blur(8px);
-      border-bottom: 1px solid var(--border);
+      background: rgba(7, 13, 20, 0.88);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border-subtle);
       z-index: 1000;
     }
     .nav-inner {
-      max-width: 1280px;
+      max-width: 1320px;
       margin: 0 auto;
-      padding: 10px 24px;
+      padding: 12px 24px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      gap: 12px;
+      gap: 16px;
     }
     .brand-logo-wrap {
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 12px;
       text-decoration: none;
       flex-shrink: 0;
     }
-    .logo-svg-container { width: 38px; height: 38px; flex-shrink: 0; }
+    .logo-svg-container { width: 40px; height: 40px; flex-shrink: 0; }
     .brand-title {
-      font-size: 20px;
+      font-size: 21px;
       font-weight: 800;
-      color: var(--brand-navy);
+      color: #ffffff;
       letter-spacing: -0.5px;
       display: flex;
       flex-direction: column;
@@ -128,10 +144,10 @@
     .brand-title span {
       font-size: 10px;
       font-weight: 700;
-      color: var(--brand-blue);
+      color: var(--primary-cyan);
       text-transform: uppercase;
-      letter-spacing: 1px;
-      margin-top: 3px;
+      letter-spacing: 1.5px;
+      margin-top: 4px;
     }
 
     nav { display: flex; align-items: center; }
@@ -145,268 +161,294 @@
       color: var(--text-muted);
       font-size: 14px;
       font-weight: 600;
+      transition: color 0.2s;
     }
-    nav a:hover { color: var(--primary); }
+    nav a:hover { color: #ffffff; }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .btn-admin-nav {
+      background: rgba(255, 255, 255, 0.06);
+      color: var(--text-muted) !important;
+      border: 1px solid var(--border-subtle);
+      padding: 8px 14px;
+      border-radius: var(--radius-sm);
+      font-size: 12.5px;
+      font-weight: 700;
+    }
+    .btn-admin-nav:hover { background: rgba(255, 255, 255, 0.12); color: #fff !important; }
 
     .btn-nav-cta {
-      background: var(--primary);
-      color: #fff !important;
-      padding: 8px 18px;
+      background: linear-gradient(135deg, var(--primary-blue), #0274a7);
+      color: #ffffff !important;
+      padding: 9px 20px;
       border-radius: var(--radius-sm);
       font-weight: 700;
-      font-size: 13px;
+      font-size: 13.5px;
       white-space: nowrap;
       flex-shrink: 0;
-      box-shadow: 0 2px 8px rgba(0, 77, 132, 0.2);
+      box-shadow: 0 4px 14px rgba(0, 142, 204, 0.3);
+      border: 1px solid rgba(255, 255, 255, 0.15);
     }
-    .btn-nav-cta:hover { background: var(--primary-dark); }
 
+    /* Ambient Hero Section */
     .hero {
-      background: radial-gradient(circle at 85% 15%, rgba(0, 142, 204, 0.12), transparent 45%),
-                  radial-gradient(circle at 15% 85%, rgba(0, 77, 132, 0.08), transparent 45%);
-      padding: 60px 24px 50px;
+      position: relative;
+      background: radial-gradient(circle at 80% 20%, rgba(56, 189, 248, 0.12), transparent 50%),
+                  radial-gradient(circle at 20% 80%, rgba(0, 142, 204, 0.08), transparent 50%),
+                  #070d14;
+      padding: 85px 24px 70px;
       text-align: center;
-      border-bottom: 1px solid var(--border);
+      border-bottom: 1px solid var(--border-subtle);
     }
-    .hero-content { max-width: 900px; margin: 0 auto; }
+    .hero-content { max-width: 940px; margin: 0 auto; }
     .badge-sub {
-      display: inline-block;
-      background: var(--primary-light);
-      color: var(--primary);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(56, 189, 248, 0.1);
+      color: var(--primary-cyan);
       font-size: 12px;
       font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 0.6px;
-      padding: 5px 14px;
+      letter-spacing: 0.8px;
+      padding: 6px 16px;
       border-radius: 50px;
-      margin-bottom: 16px;
+      border: 1px solid rgba(56, 189, 248, 0.25);
+      margin-bottom: 22px;
     }
     .hero h1 {
-      font-size: 42px;
-      letter-spacing: -1px;
-      margin-bottom: 18px;
-      color: var(--brand-navy);
+      font-size: 46px;
+      letter-spacing: -1.2px;
+      margin-bottom: 20px;
       line-height: 1.15;
+      background: linear-gradient(180deg, #ffffff 30%, #cbd5e1 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
     .hero p {
-      font-size: 17px;
+      font-size: 17.5px;
       color: var(--text-muted);
-      max-width: 760px;
-      margin: 0 auto 30px;
+      max-width: 780px;
+      margin: 0 auto 34px;
+      line-height: 1.65;
     }
     .hero-cta-group {
       display: flex;
       justify-content: center;
-      gap: 14px;
+      gap: 16px;
       flex-wrap: wrap;
     }
     .btn-main {
-      background: var(--primary);
+      background: linear-gradient(135deg, #008ecc 0%, #006b99 100%);
       color: #fff;
-      padding: 14px 28px;
+      padding: 15px 32px;
       border-radius: var(--radius-sm);
       font-weight: 700;
       font-size: 15px;
-      box-shadow: 0 4px 14px rgba(0, 77, 132, 0.25);
+      box-shadow: 0 8px 24px rgba(0, 142, 204, 0.35);
       display: inline-flex;
       align-items: center;
-      gap: 8px;
+      gap: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
     }
-    .btn-main:hover { background: var(--primary-dark); transform: translateY(-2px); }
+    .btn-main:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(0, 142, 204, 0.5); }
     .btn-alt {
-      background: #fff;
-      color: var(--text-dark);
-      border: 1px solid var(--border);
-      padding: 14px 26px;
+      background: rgba(255, 255, 255, 0.05);
+      color: #ffffff;
+      border: 1px solid var(--border-subtle);
+      padding: 15px 28px;
       border-radius: var(--radius-sm);
       font-weight: 600;
       font-size: 15px;
       display: inline-flex;
       align-items: center;
-      gap: 8px;
+      gap: 10px;
     }
-    .btn-alt:hover { background: var(--primary-light); }
 
     .specs-strip {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 14px;
-      max-width: 1100px;
-      margin: 40px auto 0;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 16px;
+      max-width: 1140px;
+      margin: 50px auto 0;
     }
     .spec-card {
-      background: #fff;
-      border: 1px solid var(--border);
-      padding: 18px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      padding: 22px;
       border-radius: var(--radius-md);
-      box-shadow: var(--shadow-sm);
+      box-shadow: var(--shadow-soft);
       text-align: left;
     }
-    .spec-card .stat { font-size: 24px; font-weight: 800; color: var(--primary); margin-bottom: 2px; }
-    .spec-card .desc { font-size: 13px; color: var(--text-muted); font-weight: 500; }
+    .spec-card .stat { font-size: 28px; font-weight: 800; color: var(--primary-cyan); margin-bottom: 4px; }
+    .spec-card .desc { font-size: 13.5px; color: var(--text-muted); font-weight: 500; }
 
-    .section-wrap { max-width: 1280px; margin: 0 auto; padding: 60px 24px; }
-    .section-header { text-align: center; max-width: 760px; margin: 0 auto 35px; }
-    .section-header h2 { font-size: 32px; color: var(--brand-navy); margin-bottom: 10px; }
-    .section-header p { font-size: 15px; color: var(--text-muted); }
+    /* Sections */
+    .section-wrap { max-width: 1320px; margin: 0 auto; padding: 75px 24px; }
+    .section-header { text-align: center; max-width: 780px; margin: 0 auto 40px; }
+    .section-header h2 { font-size: 34px; margin-bottom: 12px; letter-spacing: -0.5px; }
+    .section-header p { font-size: 15.5px; color: var(--text-muted); }
 
+    /* Services Grid */
     .services-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 22px;
+      gap: 24px;
     }
     .service-box {
       background: var(--bg-card);
-      border: 1px solid var(--border);
+      border: 1px solid var(--border-subtle);
       border-radius: var(--radius-lg);
       overflow: hidden;
-      box-shadow: var(--shadow-sm);
+      box-shadow: var(--shadow-soft);
       display: flex;
       flex-direction: column;
       transition: transform 0.2s, border-color 0.2s;
     }
-    .service-box:hover { transform: translateY(-4px); border-color: var(--brand-blue); box-shadow: var(--shadow-md); }
-    .service-img-wrap { width: 100%; height: 190px; background: #f1f5f9; position: relative; overflow: hidden; }
+    .service-box:hover { transform: translateY(-5px); border-color: rgba(56, 189, 248, 0.4); box-shadow: var(--shadow-glow); }
+    .service-img-wrap { width: 100%; height: 200px; background: #0b141f; position: relative; overflow: hidden; }
     .service-img-wrap img { width: 100%; height: 100%; object-fit: cover; }
     .service-badge-tag {
       position: absolute;
-      top: 12px;
-      right: 12px;
-      background: rgba(26, 46, 64, 0.9);
-      color: #fff;
+      top: 14px;
+      right: 14px;
+      background: rgba(7, 13, 20, 0.85);
+      color: var(--primary-cyan);
       font-size: 11px;
       font-weight: 700;
       text-transform: uppercase;
-      padding: 4px 10px;
+      padding: 4px 12px;
       border-radius: 50px;
+      border: 1px solid var(--border-subtle);
     }
-    .service-body { padding: 20px; flex: 1; display: flex; flex-direction: column; }
-    .service-body h3 { font-size: 19px; color: var(--brand-navy); margin-bottom: 8px; }
-    .service-body p { font-size: 14px; color: var(--text-body); line-height: 1.5; margin-bottom: 14px; flex: 1; }
-    .service-features { list-style: none; margin-bottom: 16px; }
+    .service-body { padding: 24px; flex: 1; display: flex; flex-direction: column; }
+    .service-body h3 { font-size: 20px; color: #ffffff; margin-bottom: 10px; }
+    .service-body p { font-size: 14px; color: var(--text-muted); line-height: 1.6; margin-bottom: 16px; flex: 1; }
+    .service-features { list-style: none; margin-bottom: 20px; }
     .service-features li {
-      font-size: 13px;
-      color: var(--text-muted);
-      margin-bottom: 5px;
+      font-size: 13.5px;
+      color: #cbd5e1;
+      margin-bottom: 6px;
       display: flex;
       align-items: center;
-      gap: 6px;
+      gap: 8px;
     }
-    .service-features li::before { content: "✓"; color: var(--brand-blue); font-weight: 800; }
+    .service-features li::before { content: "✓"; color: var(--primary-cyan); font-weight: 800; }
     .service-order-link {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      background: var(--primary-light);
-      color: var(--primary);
-      padding: 10px 14px;
+      background: rgba(56, 189, 248, 0.1);
+      color: var(--primary-cyan);
+      border: 1px solid rgba(56, 189, 248, 0.25);
+      padding: 12px 16px;
       border-radius: var(--radius-sm);
-      font-size: 13px;
+      font-size: 13.5px;
       font-weight: 700;
-      text-align: center;
     }
-    .service-order-link:hover { background: var(--primary); color: #fff; }
+    .service-order-link:hover { background: var(--primary-blue); color: #ffffff; }
 
+    /* Materials Table */
     .table-container {
       overflow-x: auto;
-      margin: 20px 0;
-      border: 1px solid var(--border);
+      margin: 24px 0;
+      border: 1px solid var(--border-subtle);
       border-radius: var(--radius-md);
-      background: #fff;
+      background: var(--bg-card);
     }
     table { width: 100%; border-collapse: collapse; text-align: left; font-size: 14px; }
     th {
-      background: #f1f5f9;
-      padding: 12px 16px;
+      background: rgba(14, 24, 36, 0.9);
+      padding: 14px 18px;
       font-weight: 700;
-      color: var(--text-dark);
-      border-bottom: 1px solid var(--border);
+      color: #ffffff;
+      border-bottom: 1px solid var(--border-subtle);
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
     }
-    td { padding: 12px 16px; border-bottom: 1px solid var(--border); color: var(--text-body); }
+    td { padding: 14px 18px; border-bottom: 1px solid rgba(255, 255, 255, 0.05); color: #cbd5e1; }
     tr:last-child td { border-bottom: none; }
 
-    /* Interactive Portfolio Gallery */
+    /* Portfolio Gallery */
     .portfolio-tabs {
       display: flex;
       justify-content: center;
-      gap: 8px;
+      gap: 10px;
       flex-wrap: wrap;
-      margin-bottom: 30px;
+      margin-bottom: 35px;
     }
     .tab-btn {
-      background: #ffffff;
-      color: var(--text-dark);
-      border: 1px solid var(--border);
-      padding: 8px 16px;
+      background: rgba(255, 255, 255, 0.05);
+      color: var(--text-muted);
+      border: 1px solid var(--border-subtle);
+      padding: 9px 20px;
       border-radius: 50px;
-      font-size: 13px;
+      font-size: 13.5px;
       font-weight: 700;
       cursor: pointer;
-      transition: all 0.2s ease;
     }
-    .tab-btn:hover, .tab-btn.active {
-      background: var(--brand-navy);
+    .tab-btn.active {
+      background: linear-gradient(135deg, var(--primary-blue), #0274a7);
       color: #ffffff;
-      border-color: var(--brand-navy);
+      border-color: var(--primary-cyan);
     }
     .gallery-container {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
-      gap: 22px;
+      gap: 24px;
     }
     .case-card {
-      background: #ffffff;
-      border: 1px solid var(--border);
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
       border-radius: var(--radius-md);
       overflow: hidden;
-      box-shadow: var(--shadow-sm);
+      box-shadow: var(--shadow-soft);
       display: flex;
       flex-direction: column;
-      transition: transform 0.2s, box-shadow 0.2s;
       cursor: pointer;
     }
-    .case-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+    .case-card:hover { transform: translateY(-5px); border-color: rgba(56, 189, 248, 0.45); }
     .media-box {
       width: 100%;
       height: 230px;
-      background: #0f172a;
+      background: #04080e;
       position: relative;
       overflow: hidden;
     }
-    .media-box img, .media-box video {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
+    .media-box img, .media-box video { width: 100%; height: 100%; object-fit: cover; display: block; }
     .badge {
       position: absolute;
-      top: 10px;
-      right: 10px;
-      background: rgba(26, 46, 64, 0.9);
-      color: #38bdf8;
+      top: 12px;
+      right: 12px;
+      background: rgba(7, 13, 20, 0.85);
+      color: var(--primary-cyan);
       font-size: 11px;
       font-weight: 700;
-      padding: 3px 9px;
+      padding: 4px 10px;
       border-radius: 50px;
+      border: 1px solid var(--border-subtle);
       text-transform: uppercase;
-      letter-spacing: 0.5px;
     }
-    .case-details { padding: 18px; flex: 1; display: flex; flex-direction: column; }
-    .case-details h3 { font-size: 16px; color: var(--brand-navy); margin-bottom: 6px; }
-    .case-details p { font-size: 13px; color: var(--text-muted); line-height: 1.5; margin-bottom: 12px; flex: 1; }
+    .case-details { padding: 20px; flex: 1; display: flex; flex-direction: column; }
+    .case-details h3 { font-size: 16.5px; color: #ffffff; margin-bottom: 6px; }
+    .case-details p { font-size: 13.5px; color: var(--text-muted); line-height: 1.5; margin-bottom: 14px; flex: 1; }
     .specs-list {
       display: flex;
       gap: 8px;
       flex-wrap: wrap;
-      border-top: 1px solid #f1f5f9;
-      padding-top: 10px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      padding-top: 12px;
       font-size: 11.5px;
       font-weight: 600;
-      color: var(--brand-blue);
+      color: var(--primary-cyan);
     }
 
-    /* Modal Lightbox Preview */
+    /* Lightbox Modal */
     .lightbox-modal {
       display: none;
       position: fixed;
@@ -415,51 +457,46 @@
       top: 0;
       width: 100%;
       height: 100%;
-      background-color: rgba(11, 19, 30, 0.94);
+      background-color: rgba(4, 8, 14, 0.95);
       align-items: center;
       justify-content: center;
-      padding: 20px;
+      padding: 24px;
     }
     .lightbox-content {
       position: relative;
       max-width: 900px;
       width: 100%;
-      background: #ffffff;
-      border-radius: 12px;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
       overflow: hidden;
-      box-shadow: 0 25px 50px -12px rgba(0,0,0,0.8);
       display: flex;
       flex-direction: column;
     }
     .lightbox-preview-wrap {
       width: 100%;
       max-height: 65vh;
-      background: #0f172a;
+      background: #020508;
       display: flex;
       align-items: center;
       justify-content: center;
       overflow: hidden;
     }
-    .lightbox-preview-wrap img, .lightbox-preview-wrap video {
-      max-width: 100%;
-      max-height: 65vh;
-      object-fit: contain;
-    }
-    .lightbox-info { padding: 20px 24px; }
-    .lightbox-info h3 { font-size: 20px; color: var(--brand-navy); margin-bottom: 6px; }
+    .lightbox-preview-wrap img, .lightbox-preview-wrap video { max-width: 100%; max-height: 65vh; object-fit: contain; }
+    .lightbox-info { padding: 24px; }
+    .lightbox-info h3 { font-size: 21px; color: #ffffff; margin-bottom: 8px; }
     .lightbox-info p { font-size: 14px; color: var(--text-muted); }
     .close-lightbox {
       position: absolute;
-      top: 12px;
-      right: 14px;
-      background: rgba(0,0,0,0.6);
+      top: 14px;
+      right: 16px;
+      background: rgba(0, 0, 0, 0.7);
       color: #fff;
-      border: none;
-      width: 34px;
-      height: 34px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      width: 36px;
+      height: 36px;
       border-radius: 50%;
       font-size: 18px;
-      font-weight: 800;
       cursor: pointer;
       display: flex;
       align-items: center;
@@ -467,152 +504,157 @@
       z-index: 10;
     }
 
+    /* Workflow Strip */
     .workflow-strip {
-      background: #ffffff;
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-      padding: 50px 24px;
+      background: linear-gradient(180deg, #09131d 0%, #0c1825 100%);
+      border-top: 1px solid var(--border-subtle);
+      border-bottom: 1px solid var(--border-subtle);
+      padding: 60px 24px;
     }
     .steps-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-      max-width: 1280px;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 24px;
+      max-width: 1320px;
       margin: 0 auto;
     }
     .step-box { text-align: left; }
     .step-num {
-      width: 34px;
-      height: 34px;
-      background: var(--primary);
-      color: #fff;
+      width: 38px;
+      height: 38px;
+      background: linear-gradient(135deg, var(--primary-cyan), var(--primary-blue));
+      color: #070d14;
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
       font-weight: 800;
-      font-size: 15px;
-      margin-bottom: 12px;
+      font-size: 16px;
+      margin-bottom: 14px;
     }
-    .step-box h4 { font-size: 17px; margin-bottom: 6px; color: var(--brand-navy); }
-    .step-box p { font-size: 13px; color: var(--text-muted); }
+    .step-box h4 { font-size: 18px; margin-bottom: 8px; color: #ffffff; }
+    .step-box p { font-size: 13.5px; color: var(--text-muted); }
 
+    /* Rx Order Portal */
     .order-section-bg {
-      background: linear-gradient(180deg, #f8fafc 0%, #eef5fa 100%);
-      padding: 60px 24px;
+      background: radial-gradient(circle at 50% 0%, rgba(56, 189, 248, 0.08), transparent 60%), #070d14;
+      padding: 70px 24px;
     }
     .portal-box {
-      background: #fff;
-      border: 1px solid var(--border);
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
       border-radius: var(--radius-lg);
-      padding: 36px;
-      box-shadow: var(--shadow-lg);
-      max-width: 940px;
+      padding: 40px;
+      box-shadow: var(--shadow-soft);
+      max-width: 960px;
       margin: 0 auto;
     }
     .portal-title-bar {
-      border-bottom: 2px solid var(--primary-light);
-      padding-bottom: 16px;
-      margin-bottom: 24px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      padding-bottom: 20px;
+      margin-bottom: 28px;
       text-align: center;
     }
-    .portal-title-bar h2 { font-size: 28px; color: var(--brand-navy); margin-bottom: 6px; }
-    .portal-title-bar p { font-size: 14px; color: var(--text-muted); }
+    .portal-title-bar h2 { font-size: 30px; margin-bottom: 8px; }
+    .portal-title-bar p { font-size: 14.5px; color: var(--text-muted); }
     .portal-section-tag {
       font-size: 13px;
       font-weight: 800;
       text-transform: uppercase;
-      letter-spacing: 0.6px;
-      color: var(--primary);
-      border-bottom: 1.5px solid var(--primary-light);
-      padding-bottom: 6px;
-      margin: 22px 0 14px;
+      letter-spacing: 0.8px;
+      color: var(--primary-cyan);
+      border-bottom: 1px solid rgba(56, 189, 248, 0.2);
+      padding-bottom: 8px;
+      margin: 26px 0 16px;
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
-    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-    .form-group { display: flex; flex-direction: column; gap: 6px; margin-bottom: 12px; }
-    .form-group label { font-size: 13px; font-weight: 700; color: var(--text-dark); }
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .form-group { display: flex; flex-direction: column; gap: 6px; margin-bottom: 14px; }
+    .form-group label { font-size: 13px; font-weight: 700; color: #cbd5e1; }
     .form-group input, .form-group select, .form-group textarea {
-      padding: 11px 12px;
-      border: 1.5px solid var(--border);
+      padding: 12px 14px;
+      border: 1.5px solid rgba(255, 255, 255, 0.1);
       border-radius: var(--radius-sm);
       font-size: 14px;
-      background: #ffffff;
+      background: #09121c;
+      color: #ffffff;
       outline: none;
     }
     .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
-      border-color: var(--primary);
+      border-color: var(--primary-cyan);
     }
 
     .tooth-module {
-      background: #f8fafc;
-      border: 1px solid var(--border);
+      background: #09121c;
+      border: 1px solid var(--border-subtle);
       border-radius: var(--radius-md);
-      padding: 16px;
-      margin-bottom: 14px;
+      padding: 18px;
+      margin-bottom: 16px;
     }
     .tooth-nav {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 12px;
+      margin-bottom: 14px;
       font-size: 13px;
       font-weight: 600;
+      color: var(--text-muted);
     }
     .btn-clear-teeth {
       background: none;
       border: none;
-      color: var(--primary);
+      color: var(--primary-cyan);
       font-weight: 700;
       cursor: pointer;
-      font-size: 12px;
+      font-size: 12.5px;
       text-decoration: underline;
     }
     .arch-wrapper {
       display: flex;
       flex-direction: column;
-      gap: 8px;
+      gap: 10px;
       align-items: center;
       overflow-x: auto;
-      padding-bottom: 6px;
+      padding-bottom: 8px;
     }
     .arch-line { display: flex; gap: 6px; align-items: center; }
-    .quad-cluster { display: flex; gap: 3px; }
+    .quad-cluster { display: flex; gap: 4px; }
     .tooth-check { display: none; }
     .tooth-btn {
-      width: 28px;
-      height: 28px;
-      background: #fff;
-      border: 1px solid #cbd5e1;
+      width: 30px;
+      height: 30px;
+      background: #101c29;
+      color: #cbd5e1;
+      border: 1px solid rgba(255, 255, 255, 0.12);
       border-radius: 4px;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 11px;
+      font-size: 11.5px;
       font-weight: 700;
       cursor: pointer;
-      user-select: none;
     }
     .tooth-check:checked + .tooth-btn {
-      background: var(--primary);
-      color: #fff;
-      border-color: var(--primary);
+      background: var(--primary-cyan);
+      color: #070d14;
+      border-color: var(--primary-cyan);
+      font-weight: 800;
     }
-    .midline-bar { width: 2px; height: 24px; background: #94a3b8; }
+    .midline-bar { width: 2px; height: 26px; background: rgba(255, 255, 255, 0.2); }
 
     .radio-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-      gap: 8px;
-      margin-bottom: 12px;
+      grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+      gap: 10px;
+      margin-bottom: 14px;
     }
-    .radio-pill { display: flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 600; cursor: pointer; }
-    .radio-pill input { accent-color: var(--primary); width: 15px; height: 15px; }
+    .radio-pill { display: flex; align-items: center; gap: 8px; font-size: 13.5px; font-weight: 600; color: #cbd5e1; cursor: pointer; }
+    .radio-pill input { accent-color: var(--primary-cyan); width: 16px; height: 16px; }
 
     .btn-submit-slip {
-      background: var(--primary);
+      background: linear-gradient(135deg, #008ecc 0%, #006b99 100%);
       color: #fff;
       border: none;
       width: 100%;
@@ -624,75 +666,138 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      gap: 8px;
-      box-shadow: 0 4px 14px rgba(0, 77, 132, 0.22);
+      gap: 10px;
+      box-shadow: 0 8px 24px rgba(0, 142, 204, 0.35);
     }
-    .btn-submit-slip:hover { background: var(--primary-dark); }
 
+    /* Embedded CRM Admin Section */
+    .admin-modal {
+      display: none;
+      position: fixed;
+      z-index: 10000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(4, 8, 14, 0.96);
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .admin-panel {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      max-width: 1100px;
+      width: 100%;
+      max-height: 90vh;
+      overflow-y: auto;
+      padding: 30px;
+      box-shadow: var(--shadow-soft);
+      position: relative;
+    }
+    .admin-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      padding-bottom: 18px;
+      margin-bottom: 24px;
+    }
+    .crm-stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 14px;
+      margin-bottom: 24px;
+    }
+    .crm-stat-box {
+      background: #09121c;
+      border: 1px solid var(--border-subtle);
+      padding: 16px;
+      border-radius: var(--radius-sm);
+    }
+    .crm-stat-box .count { font-size: 24px; font-weight: 800; color: var(--primary-cyan); }
+    .crm-stat-box .label { font-size: 12px; color: var(--text-muted); text-transform: uppercase; }
+
+    .crm-actions {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .btn-crm-action {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid var(--border-subtle);
+      color: #fff;
+      padding: 8px 16px;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .btn-crm-action:hover { background: rgba(255, 255, 255, 0.12); }
+
+    /* Lab Coverage Bar */
     .lab-info-bar {
-      background: #fff;
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-      padding: 36px 24px;
+      background: #09131d;
+      border-top: 1px solid var(--border-subtle);
+      border-bottom: 1px solid var(--border-subtle);
+      padding: 40px 24px;
     }
     .info-bar-inner {
-      max-width: 1280px;
+      max-width: 1320px;
       margin: 0 auto;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 24px;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 28px;
     }
-    .info-card h4 { font-size: 15px; color: var(--brand-navy); margin-bottom: 6px; }
-    .info-card p { font-size: 13px; color: var(--text-muted); line-height: 1.5; }
+    .info-card h4 { font-size: 16px; color: #ffffff; margin-bottom: 8px; }
+    .info-card p { font-size: 13.5px; color: var(--text-muted); line-height: 1.6; }
 
     footer {
-      background: var(--brand-navy);
-      color: #94a3b8;
-      padding: 30px 24px;
-      font-size: 13px;
+      background: #060b10;
+      color: var(--text-faint);
+      padding: 32px 24px;
+      font-size: 13.5px;
     }
     .footer-flex {
-      max-width: 1280px;
+      max-width: 1320px;
       margin: 0 auto;
       display: flex;
       justify-content: space-between;
       align-items: center;
       flex-wrap: wrap;
-      gap: 14px;
+      gap: 16px;
     }
 
     .floating-wa {
       position: fixed;
-      bottom: 20px;
-      right: 20px;
+      bottom: 22px;
+      right: 22px;
       background: #25d366;
       color: #fff;
-      width: 54px;
-      height: 54px;
+      width: 56px;
+      height: 56px;
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 28px;
-      box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+      font-size: 30px;
+      box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4);
       z-index: 999;
     }
 
     @media (max-width: 900px) {
-      .nav-inner { padding: 8px 14px; }
+      .nav-inner { padding: 10px 16px; }
       nav ul { display: none; }
-      .brand-title { font-size: 17px; }
-      .brand-title span { font-size: 9px; }
-      .btn-nav-cta { padding: 6px 12px; font-size: 12px; }
-      .hero { padding: 36px 14px 28px; }
-      .hero h1 { font-size: 26px; }
-      .hero p { font-size: 14px; }
-      .hero-cta-group { flex-direction: column; }
-      .btn-main, .btn-alt { width: 100%; }
-      .specs-strip { grid-template-columns: 1fr 1fr; gap: 8px; }
+      .hero { padding: 45px 16px 35px; }
+      .hero h1 { font-size: 28px; }
+      .specs-strip { grid-template-columns: 1fr 1fr; gap: 10px; }
       .services-grid, .gallery-container { grid-template-columns: 1fr; }
       .grid-2 { grid-template-columns: 1fr; }
-      .portal-box { padding: 20px 14px; }
+      .portal-box { padding: 24px 16px; }
     }
   </style>
 </head>
@@ -707,10 +812,10 @@
       <a href="#" class="brand-logo-wrap">
         <div class="logo-svg-container">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
-            <path d="M 250,135 C 285,145 320,132 345,152 C 365,168 360,195 348,225 C 340,248 318,340 286,375 C 278,384 266,380 262,365 C 256,345 250,332 250,332 C 250,332 244,345 238,365 C 234,380 222,384 214,375 C 182,340 160,248 152,225 C 140,195 135,168 155,152 C 180,132 215,145 250,135 Z" fill="none" stroke="#1a2e40" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M 250,135 C 285,145 320,132 345,152 C 365,168 360,195 348,225 C 340,248 318,340 286,375 C 278,384 266,380 262,365 C 256,345 250,332 250,332 C 250,332 244,345 238,365 C 234,380 222,384 214,375 C 182,340 160,248 152,225 C 140,195 135,168 155,152 C 180,132 215,145 250,135 Z" fill="none" stroke="#38bdf8" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
             <path d="M 166,168 C 178,154 195,147 215,147 C 185,165 174,188 170,215 C 163,195 162,180 166,168 Z" fill="#008ecc"/>
-            <path d="M 250,305 C 238,285 208,255 208,225 C 208,198 230,188 250,210 C 270,188 292,198 292,225 C 292,255 262,285 250,305 Z" fill="none" stroke="#1a2e40" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M 322,232 C 348,212 368,172 384,182 C 392,187 392,204 380,225 C 368,245 348,272 334,295" fill="none" stroke="#1a2e40" stroke-width="16" stroke-linecap="round"/>
+            <path d="M 250,305 C 238,285 208,255 208,225 C 208,198 230,188 250,210 C 270,188 292,198 292,225 C 292,255 262,285 250,305 Z" fill="none" stroke="#38bdf8" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M 322,232 C 348,212 368,172 384,182 C 392,187 392,204 380,225 C 368,245 348,272 334,295" fill="none" stroke="#38bdf8" stroke-width="16" stroke-linecap="round"/>
           </svg>
         </div>
         <div class="brand-title">
@@ -722,27 +827,31 @@
       <nav>
         <ul>
           <li><a href="#services">Services</a></li>
-          <li><a href="#portfolio" style="color: #008ecc; font-weight: 700;">Clinical Archive ↗</a></li>
+          <li><a href="#portfolio" style="color: var(--primary-cyan); font-weight: 700;">Clinical Archive ↗</a></li>
           <li><a href="#materials">Materials</a></li>
           <li><a href="#workflow">Workflow</a></li>
+          <li><a href="https://www.linkedin.com/company/144919016/" target="_blank" rel="noopener noreferrer" style="color: #38bdf8;">LinkedIn ↗</a></li>
           <li><a href="#contact-info">Coverage</a></li>
         </ul>
       </nav>
 
-      <a href="#portal" class="btn-nav-cta">Dispatch Case</a>
+      <div class="header-actions">
+        <button class="btn-admin-nav" onclick="promptAdminLogin()">Admin CRM</button>
+        <a href="#portal" class="btn-nav-cta">Dispatch Case</a>
+      </div>
     </div>
   </header>
 
   <section class="hero">
     <div class="hero-content">
-      <span class="badge-sub">Sub-Micron CAD/CAM Precision • Lahore</span>
+      <span class="badge-sub">🔬 Sub-Micron CAD/CAM Precision • Lahore</span>
       <h1>Eliminate Chairside High-Spots &amp; Occlusal Adjustments</h1>
       <p>Dentorica Dental Lab delivers high-translucency CAD/CAM Zirconia, Exocad/3Shape STL designs, precision-layered PFM, flexible dentures, and Cast Partial Dentures (CPD) crafted for passive clinical seating.</p>
       
       <div class="hero-cta-group">
         <a href="#portal" class="btn-main"><span>🚀</span> Submit Digital Lab Slip</a>
         <a href="https://wa.me/923084377295?text=Hello%20Dentorica%20Lab,%20I%20need%20a%20clinical%20courier%20pickup%20in%20Lahore." target="_blank" class="btn-alt">
-          <span>📞</span> Request Rider Pickup
+          <span>🛵</span> Request Rider Pickup
         </a>
       </div>
 
@@ -896,10 +1005,8 @@
       <button class="tab-btn" onclick="applyFilter('dentures', this)">Dentures &amp; Flexible</button>
     </div>
 
-    <!-- The 18-Case Gallery with Renamed Safe Filenames -->
+    <!-- The 18-Case Gallery -->
     <div class="gallery-container">
-
-      <!-- 1. Flexible Anterior -->
       <div class="case-card" data-category="dentures" onclick="openLightbox('case-1.jpg', 'Anterior Flexible Partial Denture', 'Thermal-injected biocompatible polyamide nylon featuring translucent tissue-colored clasps that eliminate silver metal hooks in the smile line.')">
         <div class="media-box">
           <img src="case-1.jpg" alt="Anterior Flexible Partial Denture" loading="lazy">
@@ -912,7 +1019,6 @@
         </div>
       </div>
 
-      <!-- 2. Posterior Bridge Seated Lateral Die -->
       <div class="case-card" data-category="fixed" onclick="openLightbox('case-2.jpg', 'Posterior Molar Bridge Model Seating', 'Multi-unit restoration seated on segmented master die showing Ditched margins and interproximal contact calibration.')">
         <div class="media-box">
           <img src="case-2.jpg" alt="Posterior Molar Bridge Model Seating" loading="lazy">
@@ -925,7 +1031,6 @@
         </div>
       </div>
 
-      <!-- 3. Posterior Occlusal Anatomy & Contact Foil -->
       <div class="case-card" data-category="fixed" onclick="openLightbox('case-3.jpg', 'Occlusal Articulating Contact Verification', 'Occlusal view on stone arch displaying blue and red articulating paper marks confirming balanced centric contacts.')">
         <div class="media-box">
           <img src="case-3.jpg" alt="Occlusal Articulating Contact Verification" loading="lazy">
@@ -938,7 +1043,6 @@
         </div>
       </div>
 
-      <!-- 4. Posterior Bridge Lingual Clearance -->
       <div class="case-card" data-category="fixed" onclick="openLightbox('case-4.jpg', 'Lingual Emergence & Die Inspection', 'Close-up perspective of crown-to-die margin integrity and embrasure spacing.')">
         <div class="media-box">
           <img src="case-4.jpg" alt="Lingual Emergence & Die Inspection" loading="lazy">
@@ -951,7 +1055,6 @@
         </div>
       </div>
 
-      <!-- 5. Full-Arch Articulation Video -->
       <div class="case-card" data-category="fixed" onclick="openLightboxVideo('video-1.mp4', 'Full-Arch Mechanical Articulation (Video)', 'Bench video showing bilateral balanced articulation, canine guidance, and excursive movement clearance.')">
         <div class="media-box">
           <video autoplay muted loop playsinline poster="case-5.jpg">
@@ -966,7 +1069,6 @@
         </div>
       </div>
 
-      <!-- 6. Full-Arch Aesthetic Smile Arc -->
       <div class="case-card" data-category="fixed" onclick="openLightbox('case-5.jpg', 'Maxillary Smile Arc Reconstruction', 'Hand-layered ceramic with natural incisal translucency and customized gingival pink porcelain.')">
         <div class="media-box">
           <img src="case-5.jpg" alt="Maxillary Smile Arc Reconstruction" loading="lazy">
@@ -979,7 +1081,6 @@
         </div>
       </div>
 
-      <!-- 7. Pre-Op Bite Registration Master Models -->
       <div class="case-card" data-category="fixed" onclick="openLightbox('case-6.jpg', 'Pre-Op Articulated Master Casts', 'Pre-restoration casts mounted on articulator with multi-colored contact marks for bite reference.')">
         <div class="media-box">
           <img src="case-6.jpg" alt="Pre-Op Articulated Master Casts" loading="lazy">
@@ -992,7 +1093,6 @@
         </div>
       </div>
 
-      <!-- 8. Maxillary Fixed Framework Frontal View -->
       <div class="case-card" data-category="fixed" onclick="openLightbox('case-7.jpg', 'Maxillary Anterior Framework Alignment', 'Frontal profile showing axial inclinations and symmetrical cervical line angles.')">
         <div class="media-box">
           <img src="case-7.jpg" alt="Maxillary Anterior Framework Alignment" loading="lazy">
@@ -1005,7 +1105,6 @@
         </div>
       </div>
 
-      <!-- 9. Co-Cr CPD Framework on Articulator -->
       <div class="case-card" data-category="cocr" onclick="openLightbox('case-8.jpg', 'Bilateral Co-Cr CPD on Mechanical Articulator', 'Medical cobalt-chromium cast partial denture with posterior acrylic saddles mounted on cast articulator.')">
         <div class="media-box">
           <img src="case-8.jpg" alt="Bilateral Co-Cr CPD on Articulator" loading="lazy">
@@ -1018,7 +1117,6 @@
         </div>
       </div>
 
-      <!-- 10. Digital CAD Mesh Lower Jaw -->
       <div class="case-card" data-category="cad" onclick="openLightbox('case-9.jpg', 'Digital Retention Mesh CAD Architecture', 'Exocad 3D modeling of mandibular alveolar retention mesh for mechanical acrylic locking.')">
         <div class="media-box">
           <img src="case-9.jpg" alt="Digital Retention Mesh CAD" loading="lazy">
@@ -1031,7 +1129,6 @@
         </div>
       </div>
 
-      <!-- 11. Digital Surveying & Undercut Analysis -->
       <div class="case-card" data-category="cad" onclick="openLightbox('case-10.jpg', 'Exocad Digital Path of Insertion Survey', 'Digital undercut depth mapping identifying ideal retentive clasp zones and guide plane paths.')">
         <div class="media-box">
           <img src="case-10.jpg" alt="Digital Path of Insertion Survey" loading="lazy">
@@ -1044,7 +1141,6 @@
         </div>
       </div>
 
-      <!-- 12. Mandibular Major Connector CAD -->
       <div class="case-card" data-category="cad" onclick="openLightbox('case-11.jpg', 'Mandibular Major Connector CAD Design', 'Sublingual relief and cross-arch stabilization bars designed on 3D virtual cast.')">
         <div class="media-box">
           <img src="case-11.jpg" alt="Mandibular Major Connector CAD" loading="lazy">
@@ -1057,7 +1153,6 @@
         </div>
       </div>
 
-      <!-- 13. Sublingual Plate CAD Architecture -->
       <div class="case-card" data-category="cad" onclick="openLightbox('case-12.jpg', 'Sublingual Plate & Minor Connectors', 'Virtual framework inspection showing minor connectors and clasp arm take-offs.')">
         <div class="media-box">
           <img src="case-12.jpg" alt="Sublingual Plate & Minor Connectors" loading="lazy">
@@ -1070,7 +1165,6 @@
         </div>
       </div>
 
-      <!-- 14. Maxillary Horseshoe Palatal CAD -->
       <div class="case-card" data-category="cad" onclick="openLightbox('case-13.jpg', 'Maxillary Horseshoe Palatal Major Connector', 'Virtual design of maxillary palatal strap framework preserving phonetics and taste sensation.')">
         <div class="media-box">
           <img src="case-13.jpg" alt="Maxillary Horseshoe Palatal Major Connector" loading="lazy">
@@ -1083,7 +1177,6 @@
         </div>
       </div>
 
-      <!-- 15. Bilateral Akers Clasp CAD Model -->
       <div class="case-card" data-category="cad" onclick="openLightbox('case-14.jpg', 'Bilateral Akers Clasp Design in 3D', 'Occlusal rests and circumferential clasp arms modeled in Exocad.')">
         <div class="media-box">
           <img src="case-14.jpg" alt="Bilateral Akers Clasp Design in 3D" loading="lazy">
@@ -1096,7 +1189,6 @@
         </div>
       </div>
 
-      <!-- 16. Lower Anterior Prep on Firing Tray -->
       <div class="case-card" data-category="fixed" onclick="openLightbox('case-15.jpg', 'Mandibular Anterior Prep Cast on Honeycomb Tray', 'Segmented incisor cores showing chamfer preparations and resorbed alveolar ridge before bridge seating.')">
         <div class="media-box">
           <img src="case-15.jpg" alt="Mandibular Anterior Prep Cast" loading="lazy">
@@ -1109,7 +1201,6 @@
         </div>
       </div>
 
-      <!-- 17. Lower Anterior Bridge with Pink Tissue Ceramic -->
       <div class="case-card" data-category="fixed" onclick="openLightbox('case-16.jpg', 'Mandibular Anterior Bridge with Pink Ceramic', '6-unit restoration seated on prep cast showing custom-shaded gingival porcelain restoring papilla height.')">
         <div class="media-box">
           <img src="case-16.jpg" alt="Mandibular Anterior Bridge with Pink Ceramic" loading="lazy">
@@ -1122,7 +1213,6 @@
         </div>
       </div>
 
-      <!-- 18. Upper Anterior B1 Shade Bridge -->
       <div class="case-card" data-category="fixed" onclick="openLightbox('case-17.jpg', 'Maxillary Anterior B1 Shade Bridge', '4-unit bridge seated on articulated cast showcasing VITA B1 vitality, natural embrasures, and canine clearance.')">
         <div class="media-box">
           <img src="case-17.jpg" alt="Maxillary Anterior B1 Shade Bridge" loading="lazy">
@@ -1134,7 +1224,6 @@
           <div class="specs-list"><span>• VITA Shade B1</span><span>• Incisal Embrasures</span><span>• Canine Guidance</span></div>
         </div>
       </div>
-
     </div>
   </section>
 
@@ -1236,10 +1325,10 @@
     <div class="portal-box">
       <div class="portal-title-bar">
         <h2>Digital Lab Prescription (Lab Slip)</h2>
-        <p>Fill out the parameters below. Submitting automatically formats your prescription slip and opens WhatsApp directly to our dispatch desk.</p>
+        <p>Fill out the parameters below. Submitting automatically formats your prescription slip, logs the case into your Dentorica CRM, and opens WhatsApp directly to our dispatch desk.</p>
       </div>
 
-      <form onsubmit="handleDigitalOrder(event)">
+      <form id="rxOrderForm" onsubmit="handleDigitalOrder(event)">
         <div class="portal-section-tag">1. Clinic &amp; Doctor Details</div>
         <div class="grid-2">
           <div class="form-group">
@@ -1383,13 +1472,13 @@
         </div>
 
         <button type="submit" class="btn-submit-slip">
-          🚀 Send Order to Dentorica Lab Desk (WhatsApp)
+          🚀 Send Order to Dentorica Lab Desk (WhatsApp &amp; CRM)
         </button>
       </form>
     </div>
   </section>
 
-  <!-- Laboratory Quick Contact -->
+  <!-- Laboratory Contact Info -->
   <section id="contact-info" class="lab-info-bar">
     <div class="info-bar-inner">
       <div class="info-card">
@@ -1419,6 +1508,64 @@
     </div>
   </div>
 
+  <!-- Embedded Admin CRM Modal -->
+  <div id="adminModal" class="admin-modal">
+    <div class="admin-panel">
+      <div class="admin-header">
+        <div>
+          <h2>Dentorica B2B Lab CRM</h2>
+          <p style="font-size: 13px; color: var(--text-muted);">Local Case Management &amp; Dispatch Tracking</p>
+        </div>
+        <button class="btn-crm-action" onclick="closeAdmin()">Close CRM ✕</button>
+      </div>
+
+      <div class="crm-stats">
+        <div class="crm-stat-box">
+          <div class="count" id="statTotalCases">0</div>
+          <div class="label">Total Orders</div>
+        </div>
+        <div class="crm-stat-box">
+          <div class="count" id="statPendingCases">0</div>
+          <div class="label">In Production / Pending</div>
+        </div>
+        <div class="crm-stat-box">
+          <div class="count" id="statCompletedCases">0</div>
+          <div class="label">Dispatched to Clinic</div>
+        </div>
+      </div>
+
+      <div class="crm-actions">
+        <div style="display: flex; gap: 8px;">
+          <button class="btn-crm-action" onclick="exportCasesToCSV()">📥 Export Orders to CSV (Excel)</button>
+          <button class="btn-crm-action" style="color: #f87171;" onclick="clearAllCases()">Clear Finished Log</button>
+        </div>
+        <div style="font-size: 12px; color: var(--text-faint);">
+          Sync: Client Storage Active
+        </div>
+      </div>
+
+      <div class="table-container" style="margin-top: 10px;">
+        <table id="crmTable">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Doctor &amp; Clinic</th>
+              <th>Patient Reference</th>
+              <th>Units / Service</th>
+              <th>Shade</th>
+              <th>Due Date</th>
+              <th>Status</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="crmTableBody">
+            <!-- Dynamically populated via JS -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
   <footer>
     <div class="footer-flex">
       <div>© 2026 Dentorica Digital Dental Lab. All rights reserved. | Precision B2B Prosthetics Lahore.</div>
@@ -1426,7 +1573,8 @@
         <a href="#services" style="color: #cbd5e1; margin-right: 14px;">Services</a>
         <a href="#portfolio" style="color: #cbd5e1; margin-right: 14px;">Portfolio</a>
         <a href="#portal" style="color: #cbd5e1; margin-right: 14px;">Lab Slip</a>
-        <a href="https://wa.me/923084377295" target="_blank" style="color: #38bdf8;">WhatsApp Direct Desk</a>
+        <a href="https://www.linkedin.com/company/144919016/" target="_blank" rel="noopener noreferrer" style="color: #38bdf8; margin-right: 14px;">LinkedIn Page</a>
+        <a href="https://wa.me/923084377295" target="_blank" style="color: var(--primary-cyan);">WhatsApp Direct Desk</a>
       </div>
     </div>
   </footer>
@@ -1478,6 +1626,19 @@
       container.innerHTML = '';
     }
 
+    /* DIGITAL ORDER & CRM LOGGING */
+    function getStoredCases() {
+      try {
+        return JSON.parse(localStorage.getItem('dentorica_cases') || '[]');
+      } catch(e) {
+        return [];
+      }
+    }
+
+    function saveStoredCases(cases) {
+      localStorage.setItem('dentorica_cases', JSON.stringify(cases));
+    }
+
     function handleDigitalOrder(e) {
       e.preventDefault();
 
@@ -1497,9 +1658,38 @@
         .map(el => el.value)
         .join(', ') || 'Not Specified (Full Arch / STL)';
 
+      // 1. Log to Embedded CRM
+      const newCase = {
+        id: 'DNT-' + Date.now().toString().slice(-4),
+        timestamp: new Date().toLocaleDateString(),
+        doctor: drName,
+        clinic: clinicName,
+        patient: patientId,
+        units: selectedUnits,
+        system: system,
+        shade: shade,
+        due: dueDate,
+        status: 'Production'
+      };
+
+      const existingCases = getStoredCases();
+      existingCases.unshift(newCase);
+      saveStoredCases(existingCases);
+
+      // 2. Track Custom Event in Google Analytics
+      if (typeof gtag === 'function') {
+        gtag('event', 'generate_lead', {
+          'event_category': 'Laboratory Prescription',
+          'event_label': system,
+          'value': 1
+        });
+      }
+
+      // 3. WhatsApp Dispatch Payload
       const payload = 
 `🦷 *DENTORICA DENTAL LAB - CLINICAL ORDER*
 ==============================================
+*Case ID:* ${newCase.id}
 *Doctor:* ${drName}
 *Clinic:* ${clinicName}
 *Patient Reference:* ${patientId}
@@ -1518,6 +1708,109 @@
 _Submitted via Dentorica Digital Slip (dentorica.com)_`;
 
       window.open(`https://wa.me/923084377295?text=${encodeURIComponent(payload)}`, '_blank');
+    }
+
+    /* ADMIN DASHBOARD FUNCTIONS */
+    function promptAdminLogin() {
+      const pin = prompt('Enter Dentorica Admin Security PIN:');
+      if (pin === '2729') {
+        renderCRM();
+        document.getElementById('adminModal').style.display = 'flex';
+      } else if (pin !== null) {
+        alert('Unauthorized PIN access.');
+      }
+    }
+
+    function closeAdmin() {
+      document.getElementById('adminModal').style.display = 'none';
+    }
+
+    function renderCRM() {
+      const cases = getStoredCases();
+      const tbody = document.getElementById('crmTableBody');
+      tbody.innerHTML = '';
+
+      let pending = 0;
+      let completed = 0;
+
+      if (cases.length === 0) {
+        tbody.innerHTML = '<tr><td colspan="8" style="text-align:center; color: var(--text-faint); padding: 25px;">No active prescriptions logged yet.</td></tr>';
+      } else {
+        cases.forEach((c, idx) => {
+          if (c.status === 'Dispatched') completed++;
+          else pending++;
+
+          const tr = document.createElement('tr');
+          tr.innerHTML = `
+            <td>${c.timestamp}</td>
+            <td><strong>${c.doctor}</strong><br><span style="font-size:11.5px; color:var(--text-muted);">${c.clinic}</span></td>
+            <td>${c.patient}</td>
+            <td><strong>${c.system}</strong><br><span style="font-size:11px; color:var(--primary-cyan);">${c.units}</span></td>
+            <td>${c.shade}</td>
+            <td style="color: #f59e0b; font-weight:700;">${c.due}</td>
+            <td>
+              <select onchange="updateCaseStatus(${idx}, this.value)" style="background:#09121c; color:#fff; border:1px solid var(--border-subtle); padding:4px 8px; border-radius:4px; font-size:12px;">
+                <option value="Production" ${c.status === 'Production' ? 'selected' : ''}>In Production</option>
+                <option value="Milling" ${c.status === 'Milling' ? 'selected' : ''}>Milling / Casting</option>
+                <option value="Dispatched" ${c.status === 'Dispatched' ? 'selected' : ''}>Dispatched</option>
+              </select>
+            </td>
+            <td>
+              <button onclick="deleteCase(${idx})" style="background:none; border:none; color:#f87171; cursor:pointer; font-weight:bold;">✕</button>
+            </td>
+          `;
+          tbody.appendChild(tr);
+        });
+      }
+
+      document.getElementById('statTotalCases').innerText = cases.length;
+      document.getElementById('statPendingCases').innerText = pending;
+      document.getElementById('statCompletedCases').innerText = completed;
+    }
+
+    function updateCaseStatus(index, newStatus) {
+      const cases = getStoredCases();
+      cases[index].status = newStatus;
+      saveStoredCases(cases);
+      renderCRM();
+    }
+
+    function deleteCase(index) {
+      if (confirm('Delete this case record?')) {
+        const cases = getStoredCases();
+        cases.splice(index, 1);
+        saveStoredCases(cases);
+        renderCRM();
+      }
+    }
+
+    function clearAllCases() {
+      if (confirm('Clear all stored case history on this machine?')) {
+        localStorage.removeItem('dentorica_cases');
+        renderCRM();
+      }
+    }
+
+    function exportCasesToCSV() {
+      const cases = getStoredCases();
+      if (cases.length === 0) {
+        alert('No cases to export.');
+        return;
+      }
+
+      let csv = 'ID,Date,Doctor,Clinic,Patient,Units,System,Shade,Due Date,Status\n';
+      cases.forEach(c => {
+        csv += `"${c.id}","${c.timestamp}","${c.doctor}","${c.clinic}","${c.patient}","${c.units}","${c.system}","${c.shade}","${c.due}","${c.status}"\n`;
+      });
+
+      const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.setAttribute('href', url);
+      link.setAttribute('download', `Dentorica_Lab_Orders_${new Date().toISOString().slice(0,10)}.csv`);
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
     }
   </script>
 
